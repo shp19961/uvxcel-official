@@ -1,0 +1,471 @@
+.scroll-top {
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  height: 20px;
+  font-size: 2.5rem;
+  z-index: 999;
+  cursor: pointer;
+  color: #F21B07;
+}
+
+.container {
+  margin-top: 96px;
+}
+
+
+/* Styles for Navbar.js */
+.navbar {
+  background: white !important;
+}
+
+.navbar-brand {
+  width: 144px !important;
+  height: 61px !important;
+  margin-right: 30px !important;
+}
+
+.nav-link {
+  font-size: 17px !important;
+  color: black !important;
+}
+
+.navbar-toggler {
+  box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+  background-image: none !important;
+  padding: 0.06rem !important;
+}
+
+.navbar {
+  box-shadow: 0 0 4px 0;
+}
+
+.nav-item>.active:hover {
+  color: red !important;
+}
+
+.nav-item>.active {
+  color: red !important;
+  border-bottom: 3.6px solid red;
+}
+
+.nav-link:hover {
+  color: orange !important;
+}
+
+.form-link:hover {
+  color: orangered !important;
+}
+
+
+
+
+/* Styles for Home.js */
+
+.carousel {
+  margin-top: 78px;
+}
+
+.carousel-inner {
+  height: 635px;
+}
+
+
+.carousel-control-next-icon {
+  background-color: black !important;
+}
+
+.carousel-control-prev-icon {
+  background-color: black !important;
+}
+
+.indicators {
+  background-color: orangered !important;
+}
+
+
+.home-services-container {
+  margin-top: 30px !important;
+}
+
+
+
+
+/* Styles for AboutUs.js */
+
+.about-title {
+  text-align: center;
+  font-size: 35px !important;
+  font-weight: bold;
+  color: #033E8C;
+}
+
+.about-text {
+  text-align: justify;
+  font-size: 17px;
+}
+
+
+
+/* Styles for Services.js */
+.serv-card {
+  height: 330px !important;
+  transition: .3s ease-in-out;
+}
+
+.serv-card:hover {
+  transform: scale(1.04);
+  transition: .3s ease-in-out;
+}
+
+.serv-card-text {
+  font-size: x-small;
+}
+
+.serv-card-img-top {
+  background-position: center;
+  object-fit: contain;
+  height: 165px;
+}
+
+.serv-card-title {
+  color: green;
+  font-size: small;
+}
+
+/* Text Animation */
+.serv-ttl {
+  color: rgb(0, 58, 139);
+  font-size: 35px !important;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  /* animation: text 5s steps(10) infinite; */
+  /* border-right: 3px solid black; */
+  /* width: 0ch; */
+}
+/* 
+@keyframes text {
+  0% {
+    width: 0ch;
+  }
+
+  50% {
+    width: 10ch;
+  }
+} */
+
+
+
+/* Styles for Technologies.js */
+
+
+.app-screen {
+  padding-bottom: 5.4rem;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  width: 250px !important;
+  height: auto;
+}
+
+.swiper-slide .slider-image img {
+  background-position: center;
+  height: 190px !important;
+  object-fit: contain;
+  filter: drop-shadow(1px 1px 0px black);
+}
+
+
+.swiper-pagination-bullet {
+  width: 0.8rem !important;
+  height: 0.8rem !important;
+}
+
+
+
+/* Styles for Careers.js */
+
+.career-deignation {
+  text-align: center;
+  color: coral;
+  margin-bottom: 15px;
+}
+
+.career-title {
+  text-align: center;
+  font-size: 35px !important;
+  font-weight: bold;
+}
+
+.subscribe-row {
+  margin-top: 6rem !important;
+}
+
+.email-box {
+  border-radius: 14px !important;
+}
+
+
+/* Contact us Form Styles */
+
+.contact-left-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-right-side {
+  padding-top: 100px;
+}
+
+.address p {
+  margin-bottom: 0 !important;
+}
+
+.social-media a:hover {
+  color: #F21B07;
+}
+
+
+
+
+.toast-container {
+  position: fixed;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(-50%) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  padding-top: 21% !important;
+  padding-right: 38% !important;
+  padding-left: 38% !important;
+  height: 100%;
+  width: 100% !important;
+}
+
+
+/* Media Queries for Small screens and Surface Duo */
+
+@media only screen and (min-width: 280px) and (max-width: 653px) {
+
+  #mySelect {
+    width: 100px !important;
+  }
+
+  .nav-item>.active {
+    border-bottom: none;
+  }
+
+  .container {
+    margin-top: 78px;
+  }
+
+  .carousel {
+    margin-top: 60px;
+  }
+
+
+  /* Navbar Media query */
+  .navbar-brand {
+    width: 100px !important;
+    height: 50px !important;
+  }
+
+  .nav-link {
+    font-size: 14px !important;
+  }
+
+  .navbar-toggler {
+    width: 40px;
+    height: 31px;
+    padding: 0 5px 6px !important;
+  }
+
+
+  /* Home Slide Media query */
+
+  .indicators {
+    width: 16px !important;
+    height: 1px !important;
+  }
+
+  .carousel-inner {
+    height: 100% !important;
+  }
+
+  .carousel-inner img {
+    height: 220px !important;
+  }
+
+  .carousel-control-next-icon {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .carousel-control-prev-icon {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  /* About us Media query */
+  .about-text {
+    text-align: justify !important;
+    font-size: 8px !important;
+  }
+
+  .about-title {
+    font-size: 30px !important;
+  }
+
+  /* Services Media query */
+  .serv-card {
+    height: 221px !important;
+  }
+
+  .serv-card-img-top {
+    height: 110px;
+  }
+
+
+  .serv-card-text {
+    font-size: 5px;
+  }
+
+  .serv-card-title {
+    font-size: 6px;
+  }
+
+  .serv-card-body {
+    text-align: center;
+  }
+
+  .serv-ttl {
+    font-size: 30px !important;
+  }
+
+  /* Technology Media query */
+
+  .tech-card {
+    height: 70px !important;
+  }
+
+  .tech-img {
+    height: 50px !important;
+  }
+
+  .tech-ttl {
+    font-size: 24px !important;
+  }
+
+
+  /* Career Media query */
+  .career-deignation {
+    font-size: small !important;
+  }
+
+  .career-text {
+    text-align: justify !important;
+    font-size: 6px !important;
+  }
+
+  .send-profile {
+    font-size: x-small;
+  }
+
+  .career-title {
+    font-size: 30px !important;
+  }
+
+  .subscribe-row {
+    transform: scale(0.6);
+  }
+
+
+  /* Contact us Media Queries */
+  .contact-title {
+    font-size: 32px !important;
+  }
+
+  .contact-card {
+    width: 100%;
+  }
+
+  .address {
+    font-size: x-small;
+  }
+
+  .toast-container {
+    padding-top: 78% !important;
+    padding-right: 15% !important;
+    padding-left: 15% !important;
+  }
+}
+
+
+/* media queries for surface duo screen */
+@media only screen and (max-width: 720px) and (min-width: 540px) {
+
+  .nav-item>.active {
+    border-bottom: none;
+  }
+
+  .carousel-inner {
+    height: 100% !important;
+  }
+
+  .carousel-inner img {
+    height: 350px !important;
+  }
+
+  /* Services Media query */
+  .serv-card {
+    height: 320px !important;
+  }
+
+  .serv-card-text {
+    font-size: small !important;
+  }
+
+  .serv-card-img-top {
+    height: 100px !important;
+  }
+
+  .serv-card-title {
+    color: green !important;
+    font-size: small !important;
+  }
+
+  .toast-container {
+    padding-top: 50% !important;
+  }
+
+}
+
+
+/* media queries for medium screen */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .nav-item>.active {
+    border-bottom: none;
+  }
+
+
+  .carousel-inner {
+    height: 100% !important;
+  }
+
+  .carousel-inner img {
+    height: 390px !important;
+  }
+
+  .toast-container {
+    padding-top: 58% !important;
+    padding-right: 25% !important;
+    padding-left: 25% !important;
+  }
+}
