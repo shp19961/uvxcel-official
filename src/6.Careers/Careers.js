@@ -86,7 +86,7 @@ const Careers = () => {
         </div>
       ))}
 
-      <form onSubmit={(e) => onSubmit(e)} className="row subscribe-row">
+      {/* <form onSubmit={(e) => onSubmit(e)} className="row subscribe-row">
         <div className="col-12 ">
           <label htmlFor="email">
             <b>Subscribe to our employment news and updates:</b>
@@ -109,6 +109,33 @@ const Careers = () => {
           >
             Subscribe
           </button>
+        </div>
+        {emailErr ? (
+          <span className="text-danger">Email is not Valid</span>
+        ) : (
+          ""
+        )}
+      </form> */}
+
+      <form onSubmit={(e) => onSubmit(e)} className="newsletter">
+        <div className="row">
+          <div className="col-md-8 col-12">
+            <input
+              onChange={(e) => onEmailChange(e)}
+              name="email"
+              value={email}
+              type="text"
+              id="email"
+              placeholder="Enter email to Subscribe news and updates"
+              className="form-control"
+              required
+            />
+          </div>
+          <div className="col-md-4 col-12">
+            <button className="main-btn" type="submit">
+              Subscribe
+            </button>
+          </div>
         </div>
         {emailErr ? (
           <span className="text-danger">Email is not Valid</span>

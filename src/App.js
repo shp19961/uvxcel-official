@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import Navbar from "./1.Navbar/Navbar";
 import AnimatedPage from "./12.Framer/AnimatedPage";
 
-import Footer from "./9.Footer/Footer";
+// import Footer from "./9.Footer/Footer";
 
 function App() {
   const [scrollTop, setScrollTop] = useState(0);
@@ -39,7 +39,7 @@ function App() {
           ></div>
         </div>
         <AnimatedPage></AnimatedPage>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </>
   );

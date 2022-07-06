@@ -21,8 +21,8 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon">
-            <FaAlignJustify size={18}/>
+          <span className="">
+            <FaAlignJustify color="black" size={18} />
           </span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">

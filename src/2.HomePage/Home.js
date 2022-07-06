@@ -8,7 +8,7 @@ import img3 from "./SlidesImages/img3.jpg";
 
 const Home = () => {
   return (
-    <>
+    <section id="home">
       <motion.div
         id="carouselExampleCaptions"
         className="carousel slide"
@@ -94,8 +94,7 @@ const Home = () => {
           ></span>
         </button>
       </motion.div>
-      <HomeServices />
-    </>
+    </section>
   );
 };
 
