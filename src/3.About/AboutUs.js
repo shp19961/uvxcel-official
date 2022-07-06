@@ -5,7 +5,7 @@ import { BsFillGearFill, BsCloudArrowDownFill } from "react-icons/bs";
 
 const AboutUs = () => {
   return (
-    <section id="about">
+    <section className="about">
       <motion.div>
         <div
           className="container mb-5"

@@ -9,7 +9,25 @@
   color: #F21B07;
 }
 
-.container {
+.toast-container {
+  position: fixed;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(-50%) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  padding-top: 21% !important;
+  padding-right: 38% !important;
+  padding-left: 38% !important;
+  height: 100%;
+  width: 100% !important;
+}
+
+.home,
+.about,
+.services,
+.technologies,
+.careers,
+.contact {
   margin-top: 96px;
 }
 
@@ -145,58 +163,34 @@
 
 
 /* Styles for Services.js */
-.serv-card {
-  height: 330px !important;
+.services .card {
+  height: 350px !important;
   transition: .3s ease-in-out;
 }
 
-.serv-card:hover {
+.services .card:hover {
   transform: scale(1.04);
   transition: .3s ease-in-out;
 }
 
-.serv-card-text {
-  font-size: x-small;
-}
-
-.serv-card-img-top {
-  background-position: center;
-  object-fit: contain;
-  height: 165px;
-}
-
-.serv-card-title {
-  color: green;
-  font-size: small;
-}
-
-/* Text Animation */
-.serv-ttl {
+.services-ttl {
   color: rgb(0, 58, 139);
   font-size: 35px !important;
   font-weight: bold;
-  overflow: hidden;
-  white-space: nowrap;
-  /* animation: text 5s steps(10) infinite; */
-  /* border-right: 3px solid black; */
-  /* width: 0ch; */
 }
 
-/* 
-@keyframes text {
-  0% {
-    width: 0ch;
-  }
+.services .card-text {
+  font-size: small;
+}
 
-  50% {
-    width: 10ch;
-  }
-} */
+.services img {
+  object-fit: contain;
+  height: 54%;
+}
 
 
 
 /* Styles for Technologies.js */
-
 
 .app-screen {
   padding-bottom: 5.4rem;
@@ -211,26 +205,20 @@
 
 .swiper-slide .slider-image img {
   background-position: center;
-  height: 190px !important;
+  height: 200px !important;
   object-fit: contain;
   filter: drop-shadow(1px 1px 0px black);
 }
 
 
 .swiper-pagination-bullet {
-  width: 0.8rem !important;
-  height: 0.8rem !important;
+  width: 0.7rem !important;
+  height: 0.7rem !important;
 }
 
 
 
 /* Styles for Careers.js */
-
-.career-deignation {
-  text-align: center;
-  color: coral;
-  margin-bottom: 15px;
-}
 
 .career-title {
   text-align: center;
@@ -238,18 +226,29 @@
   font-weight: bold;
 }
 
-.subscribe-row {
-  margin-top: 6rem !important;
+.career-deignation {
+  color: coral;
 }
 
-.email-box {
-  border-radius: 14px !important;
+.job-description {
+  font-size: 12px;
+}
+
+.job-card {
+  transition: .4s ease-in-out;
+}
+
+.job-card:hover {
+  background: black;
+  color: white;
+  transition: .4s ease-in-out;
 }
 
 .newsletter {
-  width: 66%;
+  width: 40%;
   margin: 2rem auto;
 }
+
 
 .main-btn {
   background-color: red;
@@ -259,6 +258,11 @@
   border-radius: 5px;
   font-weight: 600;
   transition: .3s ease-in-out;
+}
+
+.main-btn:hover {
+  background: white;
+  color: red;
 }
 
 .newsletter .form-control {
@@ -281,6 +285,9 @@
   border-color: red;
 }
 
+
+
+
 /* Contact us Form Styles */
 
 .contact-left-side {
@@ -298,20 +305,6 @@
 }
 
 
-
-
-.toast-container {
-  position: fixed;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translateX(-50%) translateY(-50%) !important;
-  background-color: rgba(0, 0, 0, 0.5) !important;
-  padding-top: 21% !important;
-  padding-right: 38% !important;
-  padding-left: 38% !important;
-  height: 100%;
-  width: 100% !important;
-}
 
 footer {
   position: relative;

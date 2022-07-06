@@ -32,34 +32,36 @@ const Technologies = () => {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.4 }}
-      className="container vh-100"
-      style={{ overflow: "hidden" }}
-    >
-      <h1 className="text-center mb-4 tech-ttl">
-        Technologies we provide assistance in
-      </h1>
-      <div className="row tech-row mt-5">
-        <div className="col-12">
-          <div className="swiper-container app-screen">
-            <div className="swiper-wrapper bg-warning">
-              {images.map((item) => (
-                <div className="swiper-slide" key={item.img}>
-                  <div className="slider-image">
-                    <img src={item.img} alt={item.img} />
+    <section className="technologies">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.4 }}
+        className="container"
+        style={{ overflow: "hidden" }}
+      >
+        <h1 className="text-center py-4 tech-ttl">
+          Technologies we provide assistance in
+        </h1>
+        <div className="row py-5">
+          <div className="col-12">
+            <div className="swiper-container app-screen">
+              <div className="swiper-wrapper">
+                {images.map((item) => (
+                  <div className="swiper-slide" key={item.img}>
+                    <div className="slider-image">
+                      <img src={item.img} alt={item.img} />
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="swiper-pagination"></div>
             </div>
-            <div className="swiper-pagination"></div>
           </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </section>
   );
 };
 

@@ -8,7 +8,7 @@ import img3 from "./SlidesImages/img3.jpg";
 
 const Home = () => {
   return (
-    <section id="home">
+    <section className="home">
       <motion.div
         id="carouselExampleCaptions"
         className="carousel slide"
