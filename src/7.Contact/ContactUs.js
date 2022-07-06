@@ -70,17 +70,14 @@ const ContactUs = () => {
     setFormData({ ...formData, [e.target.name]: countrycode + e.target.value });
   };
 
-  const onSubjectChange = (e) => {
-    let subjectData = e.target.value;
-    if (subjectData.length < 1) {
-      e.target.style.border = "2px solid red";
-      setSubjectErr(true);
+  const onSelectChange = (e) => {
+    let value = e.target.value;
+    if (value === "issue") {
+      document.getElementById("help").placeholder =
+        "Please describe your issue ";
     } else {
-      setSubjectErr(false);
-      e.target.style.border = "2px solid green";
+      document.getElementById("help").placeholder = "How Can We help You ?";
     }
-    setSubject(subjectData);
-    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const onHelpChange = (e) => {
@@ -140,7 +137,7 @@ const ContactUs = () => {
         </div>
         <div className="container">
           <div className="row">
-            <div className="col-md-5 p-2">
+            <div className="col-md-5">
               <div className="address">
                 <h4 className="mb-4">Our Office</h4>
                 <p>
@@ -151,11 +148,12 @@ const ContactUs = () => {
                 </p>
                 <p className="bg-light">
                   <iframe
+                    title="office-address"
                     className="gmap_iframe"
-                    frameborder="0"
+                    frameBorder="0"
                     scrolling="no"
-                    marginheight="0"
-                    marginwidth="0"
+                    marginHeight="0"
+                    marginWidth="0"
                     src="https://maps.google.com/maps?hl=en&amp;q=uvxcel&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                   ></iframe>
                 </p>
@@ -184,17 +182,17 @@ const ContactUs = () => {
                 </div> */}
               </div>
             </div>
-            <div className="col-md-7 p-5">
+            <div className="col-md-7 mt-5">
               <form onSubmit={(e) => onSubmit(e)}>
-                <div className="row">
-                  <div className="mb-3 col-6">
+                <div className="row mt-3 justify-content-end">
+                  <div className="mb-4 col-5">
                     <div className="form-group">
                       <input
                         onChange={(e) => onNameChange(e)}
                         type="text"
                         name="name"
                         value={name}
-                        className="form-control p-3"
+                        className="form-control p-2"
                         id="name"
                         placeholder="Full Name"
                         required
@@ -208,14 +206,14 @@ const ContactUs = () => {
                       ""
                     )}
                   </div>
-                  <div className="mb-3 col-6">
+                  <div className="mb-4 col-5">
                     <div className="form-group">
                       <input
                         onChange={(e) => onEmailChange(e)}
                         type="text"
                         name="email"
                         value={email}
-                        className="form-control p-3"
+                        className="form-control p-2"
                         id="email"
                         placeholder="Email"
                         required
@@ -227,13 +225,13 @@ const ContactUs = () => {
                       ""
                     )}
                   </div>
-                  <div className="col-6">
-                    <div className="form-group mb-3">
+                  <div className="col-5">
+                    <div className="form-group mb-4">
                       <div className="input-group">
                         <select
                           id="mySelect"
                           style={{
-                            width: "120px",
+                            width: "117px",
                             border: "2px solid orange",
                           }}
                           onChange={(e) => {
@@ -254,7 +252,7 @@ const ContactUs = () => {
                           type="text"
                           name="mobile"
                           value={mobile}
-                          className="form-control p-3"
+                          className="form-control p-2"
                           id="mobile"
                           placeholder="Enter Mobile number"
                           required
@@ -269,30 +267,23 @@ const ContactUs = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-6">
-                    <div className="form-group mb-3">
-                      <input
-                        maxLength={18}
-                        onChange={(e) => onSubjectChange(e)}
-                        type="text"
-                        name="subject"
-                        value={subject}
-                        className="form-control p-3"
-                        id="sub"
-                        placeholder="Subject"
+                  <div className="col-5">
+                    <div className="form-group mb-4">
+                      <select
+                        className="form-select form-control p-2"
+                        aria-label="Default select example"
                         required
-                      />
-                      {subjectErr ? (
-                        <span className="text-danger">
-                          You can not leave this blank
-                        </span>
-                      ) : (
-                        ""
-                      )}
+                        onChange={(e) => onSelectChange(e)}
+                      >
+                        <option>Regarding</option>
+                        <option value="enquiry">Enquiry</option>
+                        <option value="issue">Report an issue</option>
+                        <option value="other">Other</option>
+                      </select>
                     </div>
                   </div>
-                  <div className="col-12">
-                    <div className="form-group mb-3">
+                  <div className="col-10">
+                    <div className="form-group mb-4">
                       <textarea
                         maxLength={45}
                         onChange={(e) => onHelpChange(e)}
@@ -301,7 +292,7 @@ const ContactUs = () => {
                         value={helptext}
                         rows="4"
                         type="text"
-                        className="form-control p-3 text"
+                        className="form-control p-2 text"
                         id="help"
                         placeholder="How Can We help You ?"
                         required
@@ -315,7 +306,7 @@ const ContactUs = () => {
                       )}
                     </div>
                   </div>
-                  <span className="form-group">
+                  <span className="form-group col-10">
                     <button
                       style={{ width: "100%" }}
                       type="submit"
