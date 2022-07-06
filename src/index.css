@@ -220,14 +220,6 @@
   font-weight: bold;
 }
 
-.career-deignation {
-  color: coral;
-}
-
-.job-description {
-  font-size: 12px;
-}
-
 .job-card {
   transition: .4s ease-in-out;
 }
@@ -236,6 +228,11 @@
   background: black;
   color: white;
   transition: .4s ease-in-out;
+  cursor: pointer;
+}
+
+.skills {
+  font-size: 12px;
 }
 
 .newsletter {

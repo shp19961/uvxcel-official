@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { jobs } from "./Data";
 import { motion } from "framer-motion";
+import { BsFillBriefcaseFill } from "react-icons/bs";
+import { FaRupeeSign } from "react-icons/fa";
+import { MdLocationOn } from "react-icons/md";
 
 const Careers = () => {
   const [email, setEmail] = useState("");
@@ -46,38 +49,38 @@ const Careers = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.4 }}
-        className="container-fluid"
+        className="container"
       >
         <ToastContainer autoClose={2000} className="toast-container" />
         <h1 className="career-title mb-4">Career Opportunities</h1>
 
         <div className="row justify-content-center">
           {jobs.map((job) => (
-            <div
-              className="col-md-5 shadow job-card p-3 mb-5 mx-4"
-              key={job.designation}
-            >
-              <h4 className="career-deignation text-center">
-                <b>Designation:{job.designation}</b>
-              </h4>
+            <div className="col-md-3" key={job.id}>
+              <div className="card job-card shadow-sm mb-4">
+                <div className="card-body">
+                  <h5 className="card-title">{job.designation}</h5>
 
-              <div className="job-description mt-2">
-                <p>
-                  <b>Responsibility : </b>
-                  {job.responsibilities}
-                </p>
-                <p>
-                  <b>Required Skills : </b>
-                  {job.skills}
-                </p>
-                <p>
-                  <b>Other Skills :</b>
-                  {job.other_skills}
-                </p>
+                  <span>
+                    <BsFillBriefcaseFill size={15} />
+                    <span className="mx-2">{job.experience} Yrs</span>
+                  </span>
+
+                  <span className="mx-3">
+                    <FaRupeeSign size={14} />
+                    <span className="mx-1">{job.salary}</span>
+                  </span>
+
+                  <span className="mx-3">
+                    <MdLocationOn />
+                    <span className="mx-1">{job.location}</span>
+                  </span>
+                  <p className="card-text mt-2 skills">{job.skills}</p>
+                </div>
               </div>
             </div>
           ))}
-          <div className="col-md-8">
+          <div className="col-md-12">
             <p className="fw-bold">
               Interested candidates to send their profile to hr@uvxcel.com OR
               use the link below to fill the Candidate Information Form.
