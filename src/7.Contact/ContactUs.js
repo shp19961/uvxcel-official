@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { BsLinkedin, BsGithub, BsFillEnvelopeFill } from "react-icons/bs";
+import { BsFillEnvelopeFill } from "react-icons/bs";
 import { toast, ToastContainer } from "react-toastify";
 import { codes } from "./countryCodes";
 import { motion } from "framer-motion";
@@ -13,9 +13,6 @@ const ContactUs = () => {
 
   const [email, setEmail] = useState("");
   const [emailErr, setEmailErr] = useState(false);
-
-  const [subject, setSubject] = useState("");
-  const [subjectErr, setSubjectErr] = useState(false);
 
   const [helptext, setHelpText] = useState("");
   const [helpErr, setHelpErr] = useState(false);
@@ -100,7 +97,6 @@ const ContactUs = () => {
       nameErr === true ||
       emailErr === true ||
       mobileErr === true ||
-      subjectErr === true ||
       helpErr === true
     ) {
       toast.error("Please enter correct details in the form");
@@ -137,7 +133,7 @@ const ContactUs = () => {
         </div>
         <div className="container">
           <div className="row">
-            <div className="col-md-5">
+            <div className="col-md-5 mt-1">
               <div className="address">
                 <h4 className="mb-4">Our Office</h4>
                 <p>
@@ -184,7 +180,7 @@ const ContactUs = () => {
             </div>
             <div className="col-md-7 mt-5">
               <form onSubmit={(e) => onSubmit(e)}>
-                <div className="row mt-3 justify-content-end">
+                <div className="row justify-content-end">
                   <div className="mb-4 col-5">
                     <div className="form-group">
                       <input

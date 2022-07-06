@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./1.Navbar/Navbar";
 import AnimatedPage from "./12.Framer/AnimatedPage";
+import ScrollButton from "./8.Scroll-To-Top/ScrollButton";
 
 // import Footer from "./9.Footer/Footer";
 
@@ -39,6 +40,7 @@ function App() {
           ></div>
         </div>
         <AnimatedPage></AnimatedPage>
+        <ScrollButton />
         {/* <Footer /> */}
       </BrowserRouter>
     </>

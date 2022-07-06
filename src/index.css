@@ -72,7 +72,7 @@
 }
 
 .carousel-inner {
-  height: 565px;
+  height: 635px;
 }
 
 .carousel-inner img {
@@ -90,39 +90,19 @@
   margin: 2rem 5px !important;
 }
 
-
-/* Styles for AboutUs.js */
-
-.about-title {
-  font-size: 35px !important;
-  font-weight: bold;
-  color: #033E8C;
-}
-
-.about-text {
-  text-align: justify;
-  font-size: 16px;
-  line-height: 2rem;
-}
-
 /* Features */
 
 #features .title {
   height: 480px;
   text-align: left;
   padding-top: 60px;
-  background: url('./images/bg.jpg') no-repeat center center;
+  background: url('./images/bg.webp') no-repeat center center;
   background-size: cover;
 }
 
 .feature-img img {
   height: auto;
   max-width: 100%;
-}
-
-.features-middle h2,
-.features-middle p {
-  color: white;
 }
 
 .margin-top-up {
@@ -160,16 +140,31 @@
 }
 
 
+/* Styles for AboutUs.js */
+
+.about-title {
+  font-size: 35px !important;
+  font-weight: bold;
+  color: #033E8C;
+}
+
+.about-text {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 2rem;
+}
+
 
 /* Styles for Services.js */
 .services .card {
   height: 350px !important;
-  transition: .3s ease-in-out;
+  transition: .2s ease-in-out;
+  border-radius: 24px;
 }
 
 .services .card:hover {
   transform: scale(1.04);
-  transition: .3s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .services-ttl {
@@ -291,6 +286,7 @@
 
 .gmap_iframe {
   width: 100% !important;
+  height: 130px;
 }
 
 .contact .form-control {

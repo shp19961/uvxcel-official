@@ -1,7 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaTree, FaAirFreshener, FaHome, FaBellSlash } from "react-icons/fa";
-import { BsFillGearFill, BsCloudArrowDownFill } from "react-icons/bs";
 
 const AboutUs = () => {
   return (
@@ -58,112 +56,6 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <section id="features">
-          <div className="title">
-            <div className="container-fluid">
-              <div className="row">
-                <div className="col-md-5 offset-md-1">
-                  <div className="features-middle">
-                    <h2>Our Special Features</h2>
-                    <p>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Aliquam, commodi laudantium? Qui modi culpa assumenda
-                      minus?
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-5">
-                  <div className="feature-img">
-                    <img
-                      src="https://www.socialbuzzing.co.uk/wp-content/uploads/2018/03/Seven-Characteristics-of-Highly-Effective-Digital-Marketing-Team.png"
-                      alt="...."
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="container-fluid margin-top-up ipad-px-30 pb-4">
-            <div className="row">
-              <div className="col-sm-12 col-lg-10 offset-lg-1">
-                <div className="row">
-                  <div className="col-sm-6 col-md-4">
-                    <div className="single-feature">
-                      <h4>Pure and simple</h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Ut dolorem quia expedita ratione.
-                      </p>
-                      <div className="feature-icon">
-                        <FaTree />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-4">
-                    <div className="single-feature">
-                      <h4>Beautiful Design</h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Ut dolorem quia expedita ratione.
-                      </p>
-                      <div className="feature-icon">
-                        <FaAirFreshener />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-5">
-                    <div className="single-feature">
-                      <h4>Color Schemes</h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Ut dolorem quia expedita ratione.
-                      </p>
-                      <div className="feature-icon">
-                        <FaHome />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-5">
-                    <div className="single-feature">
-                      <h4>Animations</h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Ut dolorem quia expedita ratione.
-                      </p>
-                      <div className="feature-icon">
-                        <FaBellSlash />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-6">
-                    <div className="single-feature">
-                      <h4>Easy to customize</h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Ut dolorem quia expedita ratione.
-                      </p>
-                      <div className="feature-icon">
-                        <BsFillGearFill />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-6">
-                    <div className="single-feature">
-                      <h4>Excellent Everything</h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Ut dolorem quia expedita ratione.
-                      </p>
-                      <div className="feature-icon">
-                        <BsCloudArrowDownFill />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </motion.div>
     </section>
   );

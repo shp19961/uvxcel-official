@@ -16,7 +16,7 @@ const Services = () => {
         <div className="row justify-content-center">
           {services.map((service) => (
             <div className="col-12 col-md-6 col-lg-4" key={service.title}>
-              <div className="card shadow-sm mb-5">
+              <div className="card shadow-sm mb-4 p-4">
                 <img src={service.img} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h6 className="card-title text-success">{service.title}</h6>
