@@ -290,20 +290,23 @@
 
 /* Contact us Form Styles */
 
-.contact-left-side {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .gmap_iframe {
   width: 100% !important;
 }
 
-.social-media a:hover {
-  color: #F21B07;
+.contact .form-control {
+  border: 2px solid orange;
+  border-radius: 15px;
+  box-shadow: none !important;
 }
 
+.contact .form-control:focus {
+  border: 2.4px solid purple !important;
+}
+
+.contact hr {
+  color: darkblue;
+}
 
 
 footer {
