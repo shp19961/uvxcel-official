@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { jobs } from "./Data";
 import { motion } from "framer-motion";
@@ -12,6 +12,7 @@ const Careers = () => {
   const [email, setEmail] = useState("");
   const [emailErr, setEmailErr] = useState(false);
 
+  const nav = useNavigate();
   const [formData, setFormData] = useState([]);
 
   const onEmailChange = (e) => {
@@ -56,8 +57,20 @@ const Careers = () => {
 
         <div className="row justify-content-center">
           {jobs.map((job) => (
-            <div className="col-md-3" key={job.id}>
+            <div className="col-md-4" key={job.id}>
               <div className="card job-card shadow-sm mb-4">
+                <div className="apply-btn">
+                  <button
+                    onClick={(e) => {
+                      console.log(e.target.value);
+                      nav("/job");
+                    }}
+                    value={job.id}
+                    className="btn btn-sm btn-outline-secondary"
+                  >
+                    Apply
+                  </button>
+                </div>
                 <div className="card-body">
                   <h5 className="card-title">{job.designation}</h5>
 

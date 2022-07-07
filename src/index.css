@@ -228,7 +228,22 @@
   background: black;
   color: white;
   transition: .4s ease-in-out;
-  cursor: pointer;
+}
+
+.job-card:hover .apply-btn button {
+  background: white;
+  color: black;
+}
+
+.apply-btn button:hover {
+  background: orangered !important;
+  color: white !important;
+}
+
+.apply-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .skills {
