@@ -6,8 +6,10 @@ import { motion } from "framer-motion";
 import img1 from "./SlidesImages/img1.jpg";
 import img2 from "./SlidesImages/img2.jpg";
 import img3 from "./SlidesImages/img3.jpg";
+import Aos from "aos";
 
 const Home = () => {
+  Aos.init();
   return (
     <>
       <section className="home">
@@ -97,7 +99,7 @@ const Home = () => {
           </button>
         </motion.div>
       </section>
-      <section id="features">
+      <section id="features" data-aos="fade-up" data-aos-duration="800">
         <div className="title">
           <div className="container-fluid">
             <div className="row">
@@ -125,7 +127,11 @@ const Home = () => {
           <div className="row">
             <div className="col-sm-12 col-lg-10 offset-lg-1">
               <div className="row">
-                <div className="col-sm-6 col-md-4">
+                <div
+                  className="col-sm-6 col-md-4"
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                >
                   <div className="single-feature">
                     <h4>Pure and simple</h4>
                     <p>
@@ -137,7 +143,11 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-6 col-md-4">
+                <div
+                  className="col-sm-6 col-md-4"
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                >
                   <div className="single-feature">
                     <h4>Beautiful Design</h4>
                     <p>
@@ -149,7 +159,11 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-6 col-md-5">
+                <div
+                  className="col-sm-6 col-md-5"
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                >
                   <div className="single-feature">
                     <h4>Color Schemes</h4>
                     <p>
@@ -161,7 +175,11 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-6 col-md-5">
+                <div
+                  className="col-sm-6 col-md-5"
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                >
                   <div className="single-feature">
                     <h4>Animations</h4>
                     <p>
@@ -173,7 +191,11 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-6 col-md-6">
+                <div
+                  className="col-sm-6 col-md-6"
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                >
                   <div className="single-feature">
                     <h4>Easy to customize</h4>
                     <p>
@@ -185,7 +207,11 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-6 col-md-6">
+                <div
+                  className="col-sm-6 col-md-6"
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                >
                   <div className="single-feature">
                     <h4>Excellent Everything</h4>
                     <p>

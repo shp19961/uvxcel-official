@@ -2,7 +2,7 @@ import React from "react";
 
 const ApplyForm = () => {
   return (
-    <div className="container">
+    <div className="container mt-5">
       <div className="row my-4">
         <iframe
           title="form"

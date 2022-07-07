@@ -143,16 +143,56 @@
 /* Styles for AboutUs.js */
 
 .about-title {
-  font-size: 35px !important;
-  font-weight: bold;
   color: #033E8C;
 }
 
 .about-text {
   text-align: justify;
   font-size: 16px;
-  line-height: 2rem;
+  line-height: 2.4rem;
 }
+
+/* Promo */
+.single-promo-1 h5 {
+  color: deeppink;
+  text-transform: uppercase;
+}
+
+.single-promo-hover {
+  transition: .2s ease-out;
+  will-change: transform;
+}
+
+.single-promo-1 {
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 1.5rem;
+  padding: 1.8rem 2.5rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+.single-promo-1::before {
+  position: absolute;
+  content: '';
+  width: 0.06rem;
+  height: 0.18rem;
+  top: 0rem;
+  left: 0rem;
+  border-radius: 50%;
+  transition: .2s ease-out;
+
+}
+
+.single-promo-1:hover::before {
+  width: 100%;
+  background: deeppink;
+}
+
+.single-promo-hover:hover {
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.64);
+}
+
 
 
 /* Styles for Services.js */
@@ -181,6 +221,7 @@
   object-fit: contain;
   height: 54%;
 }
+
 
 
 
@@ -222,6 +263,10 @@
 
 .job-card {
   transition: .4s ease-in-out;
+}
+
+.job-card .card-title {
+  color: orange;
 }
 
 .job-card:hover {

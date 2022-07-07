@@ -132,7 +132,7 @@ const ContactUs = () => {
           </div>
         </div>
         <div className="container">
-          <div className="row">
+          <div className="row mt-5">
             <div className="col-md-5 mt-1">
               <div className="address">
                 <h4 className="mb-4">Our Office</h4>
@@ -271,7 +271,7 @@ const ContactUs = () => {
                         required
                         onChange={(e) => onSelectChange(e)}
                       >
-                        <option>Regarding</option>
+                        <option>Select subject</option>
                         <option value="enquiry">Enquiry</option>
                         <option value="issue">Report an issue</option>
                         <option value="other">Other</option>

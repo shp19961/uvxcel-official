@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { jobs } from "./Data";
 import { motion } from "framer-motion";
@@ -12,7 +12,6 @@ const Careers = () => {
   const [email, setEmail] = useState("");
   const [emailErr, setEmailErr] = useState(false);
 
-  const nav = useNavigate();
   const [formData, setFormData] = useState([]);
 
   const onEmailChange = (e) => {
@@ -53,9 +52,9 @@ const Careers = () => {
         className="container"
       >
         <ToastContainer autoClose={2000} className="toast-container" />
-        <h1 className="career-title mb-4">Career Opportunities</h1>
+        <h1 className="career-title">Career Opportunities</h1>
 
-        <div className="row justify-content-center">
+        <div className="row justify-content-center mt-5">
           {jobs.map((job) => (
             <div className="col-md-4" key={job.id}>
               <div className="card job-card shadow-sm mb-4">
@@ -63,7 +62,6 @@ const Careers = () => {
                   <button
                     onClick={(e) => {
                       console.log(e.target.value);
-                      nav("/job");
                     }}
                     value={job.id}
                     className="btn btn-sm btn-outline-secondary"
@@ -73,7 +71,6 @@ const Careers = () => {
                 </div>
                 <div className="card-body">
                   <h5 className="card-title">{job.designation}</h5>
-
                   <span>
                     <BsFillBriefcaseFill size={15} />
                     <span className="mx-2">{job.experience} Yrs</span>
