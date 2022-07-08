@@ -32,15 +32,14 @@ const Technologies = () => {
   }, []);
 
   return (
-    <section className="technologies">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.4 }}
-        className="container"
-        style={{ overflow: "hidden" }}
-      >
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.4 }}
+      className="technologies"
+    >
+      <div className="container" style={{ overflow: "hidden" }}>
         <h1 className="text-center py-4 tech-ttl">
           Technologies we provide assistance in
         </h1>
@@ -60,8 +59,8 @@ const Technologies = () => {
             </div>
           </div>
         </div>
-      </motion.div>
-    </section>
+      </div>
+    </motion.div>
   );
 };
 

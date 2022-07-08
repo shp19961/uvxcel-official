@@ -267,7 +267,7 @@
   transition: .4s ease-in-out;
 }
 
-.job-card .card-title {
+.job-card .card-title, .current-job .card-title {
   color: orange;
 }
 

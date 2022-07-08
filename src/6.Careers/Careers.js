@@ -52,14 +52,14 @@ const Careers = () => {
   };
 
   return (
-    <section className="careers">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.4 }}
-        className="container"
-      >
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.4 }}
+      className="careers"
+    >
+      <div className="container">
         <ToastContainer autoClose={2000} className="toast-container" />
         <h1 className="career-title">Career Opportunities</h1>
 
@@ -108,7 +108,7 @@ const Careers = () => {
         </div>
 
         <form onSubmit={(e) => onSubmit(e)} className="newsletter">
-          <div className="row">
+          <div className="row justify-content-start">
             <div className="col-md-8 col-12">
               <input
                 onChange={(e) => onEmailChange(e)}
@@ -133,8 +133,8 @@ const Careers = () => {
             ""
           )}
         </form>
-      </motion.div>
-    </section>
+      </div>
+    </motion.div>
   );
 };
 

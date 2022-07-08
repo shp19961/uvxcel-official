@@ -114,203 +114,201 @@ const ContactUs = () => {
   };
 
   return (
-    <section className="contact">
-      <motion.div>
-        <ToastContainer autoClose={2000} className="toast-container" />
-        <div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.4 }}
-          className="container"
-        >
-          <div className="text-center">
-            <h5 className="text-uppercase" style={{ color: "deeppink" }}>
-              Let's Start a Conversation
-            </h5>
-            <h1 className="fw-bold">Contact Us</h1>
-          </div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.4 }}
+      className="contact"
+    >
+      <ToastContainer autoClose={2000} className="toast-container" />
+      <div className="container">
+        <div className="text-center">
+          <h5 className="text-uppercase" style={{ color: "deeppink" }}>
+            Let's Start a Conversation
+          </h5>
+          <h1 className="fw-bold">Contact Us</h1>
         </div>
-        <div className="container">
-          <div className="row mt-5">
-            <div className="col-md-5 mt-1">
-              <div className="address">
-                <h4 className="mb-4">Our Office</h4>
-                <p>
-                  <GrLocation />
-                  <span className="mx-2">
-                    Unit No. 223, Goodwill SquareMall, Dhanori, Pune
-                  </span>
-                </p>
-                <p className="bg-light">
-                  <iframe
-                    title="office-address"
-                    className="gmap_iframe"
-                    frameBorder="0"
-                    scrolling="no"
-                    marginHeight="0"
-                    marginWidth="0"
-                    src="https://maps.google.com/maps?hl=en&amp;q=uvxcel&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                  ></iframe>
-                </p>
-                <hr />
-                <p>
-                  <MdCall />
-                  <span className="mx-2">
-                    For Enquiry: +91-20-67026259 | marketing@uvxcel.com
-                  </span>
-                </p>
-                <hr />
-                <p>
-                  <BsFillEnvelopeFill />
-                  <span className="mx-2">
-                    For career opportunities: hr@uvxcel.com
-                  </span>
-                </p>
-                <hr />
-              </div>
+      </div>
+      <div className="container">
+        <div className="row mt-5">
+          <div className="col-md-5 mt-1">
+            <div className="address">
+              <h4 className="mb-4">Our Office</h4>
+              <p>
+                <GrLocation />
+                <span className="mx-2">
+                  Unit No. 223, Goodwill SquareMall, Dhanori, Pune
+                </span>
+              </p>
+              <p className="bg-light">
+                <iframe
+                  title="office-address"
+                  className="gmap_iframe"
+                  frameBorder="0"
+                  scrolling="no"
+                  marginHeight="0"
+                  marginWidth="0"
+                  src="https://maps.google.com/maps?hl=en&amp;q=uvxcel&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                ></iframe>
+              </p>
+              <hr />
+              <p>
+                <MdCall />
+                <span className="mx-2">
+                  For Enquiry: +91-20-67026259 | marketing@uvxcel.com
+                </span>
+              </p>
+              <hr />
+              <p>
+                <BsFillEnvelopeFill />
+                <span className="mx-2">
+                  For career opportunities: hr@uvxcel.com
+                </span>
+              </p>
+              <hr />
             </div>
-            <div className="col-md-7 mt-5">
-              <form onSubmit={(e) => onSubmit(e)}>
-                <div className="row justify-content-end">
-                  <div className="mb-4 col-5">
-                    <div className="form-group">
-                      <input
-                        onChange={(e) => onNameChange(e)}
-                        type="text"
-                        name="name"
-                        value={name}
-                        className="form-control p-2"
-                        id="name"
-                        placeholder="Full Name"
-                        required
-                      />
-                    </div>
-                    {nameErr ? (
-                      <span className="text-danger">
-                        Min 4 characters required
-                      </span>
-                    ) : (
-                      ""
-                    )}
+          </div>
+          <div className="col-md-7 mt-5">
+            <form onSubmit={(e) => onSubmit(e)}>
+              <div className="row justify-content-end">
+                <div className="mb-4 col-5">
+                  <div className="form-group">
+                    <input
+                      onChange={(e) => onNameChange(e)}
+                      type="text"
+                      name="name"
+                      value={name}
+                      className="form-control p-2"
+                      id="name"
+                      placeholder="Full Name"
+                      required
+                    />
                   </div>
-                  <div className="mb-4 col-5">
-                    <div className="form-group">
-                      <input
-                        onChange={(e) => onEmailChange(e)}
-                        type="text"
-                        name="email"
-                        value={email}
-                        className="form-control p-2"
-                        id="email"
-                        placeholder="Email"
-                        required
-                      />
-                    </div>
-                    {emailErr ? (
-                      <span className="text-danger">Email is not Valid</span>
-                    ) : (
-                      ""
-                    )}
+                  {nameErr ? (
+                    <span className="text-danger">
+                      Min 4 characters required
+                    </span>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <div className="mb-4 col-5">
+                  <div className="form-group">
+                    <input
+                      onChange={(e) => onEmailChange(e)}
+                      type="text"
+                      name="email"
+                      value={email}
+                      className="form-control p-2"
+                      id="email"
+                      placeholder="Email"
+                      required
+                    />
                   </div>
-                  <div className="col-5">
-                    <div className="form-group mb-4">
-                      <div className="input-group">
-                        <select
-                          id="mySelect"
-                          style={{
-                            width: "117px",
-                            border: "2px solid orange",
-                          }}
-                          onChange={(e) => {
-                            setCountryCode(e.target.value);
-                          }}
-                          className="input-group-text btn btn-white"
-                        >
-                          {codes.map((code) => {
-                            return (
-                              <option key={code.name} value={code.code}>
-                                {code.name} {code.code}
-                              </option>
-                            );
-                          })}
-                        </select>
-                        <input
-                          onChange={(e) => onMobileChange(e)}
-                          type="text"
-                          name="mobile"
-                          value={mobile}
-                          className="form-control p-2"
-                          id="mobile"
-                          placeholder="Enter Mobile number"
-                          required
-                        />
-                        {mobileErr ? (
-                          <span className="text-danger">
-                            Please enter valid mobile number
-                          </span>
-                        ) : (
-                          ""
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-5">
-                    <div className="form-group mb-4">
+                  {emailErr ? (
+                    <span className="text-danger">Email is not Valid</span>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <div className="col-5">
+                  <div className="form-group mb-4">
+                    <div className="input-group">
                       <select
-                        className="form-select form-control p-2"
-                        aria-label="Default select example"
-                        required
-                        onChange={(e) => onSelectChange(e)}
+                        id="mySelect"
+                        style={{
+                          width: "117px",
+                          border: "2px solid orange",
+                        }}
+                        onChange={(e) => {
+                          setCountryCode(e.target.value);
+                        }}
+                        className="input-group-text btn btn-white"
                       >
-                        <option>Select subject</option>
-                        <option value="enquiry">Enquiry</option>
-                        <option value="issue">Report an issue</option>
-                        <option value="other">Other</option>
+                        {codes.map((code) => {
+                          return (
+                            <option key={code.name} value={code.code}>
+                              {code.name} {code.code}
+                            </option>
+                          );
+                        })}
                       </select>
-                    </div>
-                  </div>
-                  <div className="col-10">
-                    <div className="form-group mb-4">
-                      <textarea
-                        maxLength={45}
-                        onChange={(e) => onHelpChange(e)}
-                        cols="30"
-                        name="helptext"
-                        value={helptext}
-                        rows="4"
+                      <input
+                        onChange={(e) => onMobileChange(e)}
                         type="text"
-                        className="form-control p-2 text"
-                        id="help"
-                        placeholder="How Can We help You ?"
+                        name="mobile"
+                        value={mobile}
+                        className="form-control p-2"
+                        id="mobile"
+                        placeholder="Enter Mobile number"
                         required
                       />
-                      {helpErr ? (
+                      {mobileErr ? (
                         <span className="text-danger">
-                          Please enter something
+                          Please enter valid mobile number
                         </span>
                       ) : (
                         ""
                       )}
                     </div>
                   </div>
-                  <span className="form-group col-10">
-                    <button
-                      style={{ width: "100%" }}
-                      type="submit"
-                      id="submit-btn"
-                      className="btn btn-primary p-2"
-                    >
-                      Send Message
-                    </button>
-                  </span>
                 </div>
-              </form>
-            </div>
+                <div className="col-5">
+                  <div className="form-group mb-4">
+                    <select
+                      className="form-select form-control p-2"
+                      aria-label="Default select example"
+                      required
+                      onChange={(e) => onSelectChange(e)}
+                    >
+                      <option>Select subject</option>
+                      <option value="enquiry">Enquiry</option>
+                      <option value="issue">Report an issue</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="col-10">
+                  <div className="form-group mb-4">
+                    <textarea
+                      maxLength={45}
+                      onChange={(e) => onHelpChange(e)}
+                      cols="30"
+                      name="helptext"
+                      value={helptext}
+                      rows="4"
+                      type="text"
+                      className="form-control p-2 text"
+                      id="help"
+                      placeholder="How Can We help You ?"
+                      required
+                    />
+                    {helpErr ? (
+                      <span className="text-danger">
+                        Please enter something
+                      </span>
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                </div>
+                <span className="form-group col-10">
+                  <button
+                    style={{ width: "100%" }}
+                    type="submit"
+                    id="submit-btn"
+                    className="btn btn-primary p-2"
+                  >
+                    Send Message
+                  </button>
+                </span>
+              </div>
+            </form>
           </div>
         </div>
-      </motion.div>
-    </section>
+      </div>
+    </motion.div>
   );
 };
 

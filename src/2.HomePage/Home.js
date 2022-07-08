@@ -11,16 +11,17 @@ import Aos from "aos";
 const Home = () => {
   Aos.init();
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.4 }}
+    >
       <section className="home">
-        <motion.div
+        <div
           id="carouselExampleCaptions"
           className="carousel slide"
           data-bs-ride="carousel"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.4 }}
         >
           <div className="carousel-indicators">
             <button
@@ -97,7 +98,7 @@ const Home = () => {
               aria-hidden="true"
             ></span>
           </button>
-        </motion.div>
+        </div>
       </section>
       <section id="features" data-aos="fade-up" data-aos-duration="800">
         <div className="title">
@@ -124,7 +125,7 @@ const Home = () => {
           </div>
         </div>
         <div className="container-fluid margin-top-up ipad-px-30 pb-5">
-          <div className="row mb-5">
+          <div className="row">
             <div className="col-sm-12 col-lg-10 offset-lg-1">
               <div className="row">
                 <div
@@ -228,7 +229,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </>
+    </motion.div>
   );
 };
 

@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 const Services = () => {
   return (
-    <section className="services mb-5">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.4 }}
-        className="container"
-      >
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.4 }}
+      className="services mb-5"
+    >
+      <div className="container">
         <h1 className="services-ttl text-center">Our Services</h1>
         <div className="row justify-content-center">
           {services.map((service) => (
@@ -26,8 +26,8 @@ const Services = () => {
             </div>
           ))}
         </div>
-      </motion.div>
-    </section>
+      </div>
+    </motion.div>
   );
 };
 
