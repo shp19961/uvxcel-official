@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="row justify-content-around py-5">
           <div className="col-lg-3">
-            <h2>Uvxcel</h2>
+            <h2>uvXcel</h2>
             <p>United We Excel</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
@@ -44,7 +44,7 @@ const Footer = () => {
           <div className="col-lg-3">
             <h6>Visit</h6>
             <p>Unit No. 223,Goodwill SquareMall, </p>
-            <p>Dhanori, Pune</p>
+            <p>Dhanori, Pune, Maharashtra, India.</p>
             <h6 className="mt-3">Enquiry</h6>
             <p>hr@uvxcel.com</p>
             <p>+91-20-67026259</p>

@@ -21,7 +21,7 @@ const AboutUs = () => {
             <div className="col-12">
               <div className="about-text">
                 <p>
-                  <strong>Uvxcel</strong> is contradictorily a startup that has
+                  <strong>uvXcel</strong> is contradictorily a startup that has
                   been set up by a group of like minded friends with collective
                   professional experience of over a century (About 140 years and
                   counting) in various domains and computer science
