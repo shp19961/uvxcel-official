@@ -46,7 +46,7 @@ const CurrentJob = () => {
                 <b>Skills:</b> {currentJob.skills}
               </p>
               <Link className="btn btn-info" to="/applyform">
-                Apply
+                Quick apply
               </Link>
             </div>
           </div>
