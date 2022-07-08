@@ -1,8 +1,7 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
-import { jobs } from "./Data";
 import { motion } from "framer-motion";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import { FaRupeeSign } from "react-icons/fa";
@@ -11,6 +10,16 @@ import { MdLocationOn } from "react-icons/md";
 const Careers = () => {
   const [email, setEmail] = useState("");
   const [emailErr, setEmailErr] = useState(false);
+
+  const [jobs, setJobs] = useState([]);
+
+  useEffect(() => {
+    const getAllJobs = async () => {
+      const getJobs = await axios.get(`http://localhost:5004/get-jobs`);
+      setJobs(getJobs.data);
+    };
+    getAllJobs();
+  }, []);
 
   const [formData, setFormData] = useState([]);
 
@@ -56,18 +65,14 @@ const Careers = () => {
 
         <div className="row justify-content-center mt-5">
           {jobs.map((job) => (
-            <div className="col-md-4" key={job.id}>
+            <div className="col-md-4" key={job._id}>
               <div className="card job-card shadow-sm mb-4">
                 <div className="apply-btn">
-                  <button
-                    onClick={(e) => {
-                      console.log(e.target.value);
-                    }}
-                    value={job.id}
-                    className="btn btn-sm btn-outline-secondary"
-                  >
-                    Apply
-                  </button>
+                  <Link to={`/get-current-job/${job._id}`}>
+                    <button className="btn btn-sm btn-outline-secondary">
+                      Apply
+                    </button>
+                  </Link>
                 </div>
                 <div className="card-body">
                   <h5 className="card-title">{job.designation}</h5>
@@ -76,12 +81,12 @@ const Careers = () => {
                     <span className="mx-2">{job.experience} Yrs</span>
                   </span>
 
-                  <span className="mx-3">
+                  <span className="mx-2">
                     <FaRupeeSign size={14} />
                     <span className="mx-1">{job.salary}</span>
                   </span>
 
-                  <span className="mx-3">
+                  <span className="mx-2">
                     <MdLocationOn />
                     <span className="mx-1">{job.location}</span>
                   </span>
@@ -90,16 +95,12 @@ const Careers = () => {
               </div>
             </div>
           ))}
-          <div className="col-md-12">
+          <div className="col-md-12 mt-5">
             <p className="fw-bold">
               Interested candidates to send their profile to hr@uvxcel.com OR
               use the link below to fill the Candidate Information Form.
               <br />
-              <Link
-                className="send-profile form-link"
-                style={{ color: "blue" }}
-                to="/applyform"
-              >
+              <Link className="" style={{ color: "blue" }} to="/applyform">
                 Candidate Form
               </Link>
             </p>

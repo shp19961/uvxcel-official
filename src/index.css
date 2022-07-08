@@ -26,8 +26,17 @@
 .services,
 .technologies,
 .careers,
+.current-job,
 .contact {
-  margin-top: 100px;
+  padding-top: 100px;
+  min-height: 100vh !important;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 

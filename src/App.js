@@ -3,8 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import Navbar from "./1.Navbar/Navbar";
 import AnimatedPage from "./12.Framer/AnimatedPage";
 import ScrollButton from "./8.Scroll-To-Top/ScrollButton";
-
-// import Footer from "./9.Footer/Footer";
+import Footer from "./9.Footer/Footer";
 
 function App() {
   const [scrollTop, setScrollTop] = useState(0);
@@ -41,7 +40,7 @@ function App() {
         </div>
         <AnimatedPage></AnimatedPage>
         <ScrollButton />
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </>
   );
