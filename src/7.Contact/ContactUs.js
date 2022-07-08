@@ -168,14 +168,6 @@ const ContactUs = () => {
                   </span>
                 </p>
                 <hr />
-                {/* <div className="social-media mt-5">
-                  <a href="https://www.linkedin.com/company/uvxcel-it-solutions/mycompany/">
-                    <BsLinkedin size={30} />
-                  </a>
-                  <a href="/contact" className="mx-4">
-                    <BsGithub size={30} />
-                  </a>
-                </div> */}
               </div>
             </div>
             <div className="col-md-7 mt-5">

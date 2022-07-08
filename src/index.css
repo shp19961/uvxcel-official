@@ -32,13 +32,6 @@
   min-height: 100vh !important;
 }
 
-footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
 
 /* Styles for Navbar.js */
 .navbar {
@@ -369,6 +362,30 @@ footer {
   color: darkblue;
 }
 
+
+/* Footer */
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 5rem;
+}
+
+footer p {
+  margin-bottom: 2px !important;
+  font-size: 15px;
+  color: darkgray !important;
+}
+
+footer p .icons:hover {
+  color: orange !important;
+}
+
+.explore-link {
+  text-decoration: none;
+}
 
 
 /* Media Queries */
