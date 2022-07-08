@@ -44,7 +44,7 @@ const Technologies = () => {
         <h1 className="text-center py-4 tech-ttl">
           Technologies we provide assistance in
         </h1>
-        <div className="row py-5">
+        <div className="row pt-5">
           <div className="col-12">
             <div className="swiper-container app-screen">
               <div className="swiper-wrapper">

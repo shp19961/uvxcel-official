@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Services = () => {
   return (
-    <section className="services">
+    <section className="services mb-5">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

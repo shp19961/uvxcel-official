@@ -123,8 +123,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="container-fluid margin-top-up ipad-px-30 pb-4">
-          <div className="row">
+        <div className="container-fluid margin-top-up ipad-px-30 pb-5">
+          <div className="row mb-5">
             <div className="col-sm-12 col-lg-10 offset-lg-1">
               <div className="row">
                 <div

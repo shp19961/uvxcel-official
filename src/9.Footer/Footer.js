@@ -17,21 +17,29 @@ const Footer = () => {
           </div>
           <div className="col-lg-2">
             <h6>Explore</h6>
-            <Link className="explore-link" to="/">
-              <p>Home</p>
-            </Link>
+            <p>
+              <Link className="explore-link" to="/">
+                Home
+              </Link>
+            </p>
 
-            <Link className="explore-link" to="/about">
-              <p>About</p>
-            </Link>
+            <p>
+              <Link className="explore-link" to="/about">
+                About
+              </Link>
+            </p>
 
-            <Link className="explore-link" to="/careers">
-              <p>Careers</p>
-            </Link>
+            <p>
+              <Link className="explore-link" to="/careers">
+                Careers
+              </Link>
+            </p>
 
-            <Link className="explore-link" to="/technologies">
-              <p>Technologies</p>
-            </Link>
+            <p>
+              <Link className="explore-link" to="/technologies">
+                Technologies
+              </Link>
+            </p>
           </div>
           <div className="col-lg-3">
             <h6>Visit</h6>
@@ -60,7 +68,7 @@ const Footer = () => {
             <p>Privacy</p>
           </div>
         </div>
-        <div className="row justify-content-around py-2">
+        <div className="row justify-content-around pb-2">
           <div className="col-lg-6">
             <p>Copyright © uvXcel Pvt. Ltd. All Rights Reserved</p>
           </div>

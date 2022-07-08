@@ -370,7 +370,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 footer p {
@@ -385,7 +385,11 @@ footer p .icons:hover {
 
 .explore-link {
   text-decoration: none;
+  color: darkgray !important;
 }
 
+.explore-link:hover {
+  color: orange !important;
+}
 
 /* Media Queries */

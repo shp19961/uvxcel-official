@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { AiFillLock, AiOutlineScan, AiFillAccountBook } from "react-icons/ai";
+import { AiFillDatabase } from "react-icons/ai";
+import { FaHandshake } from "react-icons/fa";
+import { RiFileExcel2Fill } from "react-icons/ri";
 import Aos from "aos";
 
 const AboutUs = () => {
@@ -69,7 +71,7 @@ const AboutUs = () => {
             <div className="col-lg-7 col-md-8">
               <div className="section-heading text-center">
                 <h1>
-                  <span>Vision and Mission</span>
+                  <span>Current Engagement</span>
                 </h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
@@ -89,13 +91,15 @@ const AboutUs = () => {
               <div className="single-promo-hover single-promo-1 text-center">
                 <div className="circle-icon">
                   <span>
-                    <AiFillAccountBook size={45} />
+                    <FaHandshake size={45} />
                   </span>
                 </div>
-                <h5 className="py-3">Clean Desing</h5>
+                <h5 className="py-3">CUSTOMER OUTREACH</h5>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-                  saepe reiciendis veniam vero voluptates!
+                  Tracking webpages consumption and user behavior to improve the
+                  website for better outreach with new and existing customers.
+                  Provided managed services to deliver adhoc database
+                  development.
                 </p>
               </div>
             </div>
@@ -108,13 +112,15 @@ const AboutUs = () => {
               <div className="single-promo-hover single-promo-1 text-center">
                 <div className="circle-icon">
                   <span>
-                    <AiFillLock size={45} />
+                    <AiFillDatabase size={45} />
                   </span>
                 </div>
-                <h5 className="py-3">SECURE DATA</h5>
+                <h5 className="py-3">DATA SERVICES</h5>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-                  saepe reiciendis veniam vero voluptates!
+                  Built team to perform ongoing standardized framework and
+                  configuration based ETL development using SQL Server
+                  Integration Services for 35+ clients to track telecom data
+                  into a centralized data repository.
                 </p>
               </div>
             </div>
@@ -127,13 +133,15 @@ const AboutUs = () => {
               <div className="single-promo-hover single-promo-1 text-center">
                 <div className="circle-icon">
                   <span>
-                    <AiOutlineScan size={45} />
+                    <RiFileExcel2Fill size={45} />
                   </span>
                 </div>
-                <h5 className="py-3">RETINA READY</h5>
+                <h5 className="py-3">BI & DW SOLUTIONS</h5>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-                  saepe reiciendis veniam vero voluptates!
+                  Designed hundreds of facts and dimensions including conformed
+                  dimensions and built ETL processes to load them from numerous
+                  data sources (files - csv, xml etc and Oracle, MySQL,for
+                  different source applications).
                 </p>
               </div>
             </div>
