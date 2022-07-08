@@ -8,7 +8,6 @@ import Services from "../4.Services/Services";
 import Technologies from "../5.Technologies/Technologies";
 import Careers from "../6.Careers/Careers";
 import ContactUs from "../7.Contact/ContactUs";
-import CurrentJob from "../6.Careers/CurrentJob";
 
 const AnimatedPage = () => {
   const location = useLocation();
@@ -22,7 +21,6 @@ const AnimatedPage = () => {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/technologies" element={<Technologies />} />
         <Route path="/applyform" element={<ApplyForm />} />
-        <Route path="/get-current-job/:id" element={<CurrentJob />} />
       </Routes>
     </AnimatePresence>
   );

@@ -49,7 +49,28 @@ const Careers = () => {
       input.value = "";
       input.style.border = "";
     }
+    console.warn(currentJob);
   };
+
+  const [currentJob, setCurrentJob] = useState([]);
+
+  const loadCurrentJob = async (id, e) => {
+    const getCurrentJob = await axios.get(
+      `http://localhost:5004/get-current-job/${id}`
+    );
+    setCurrentJob(getCurrentJob.data);
+    console.log(e.target);
+  };
+
+  useEffect(() => {
+    const loadDefaultJob = async () => {
+      const getDefaultJob = await axios.get(
+        `http://localhost:5004/get-current-job/62c7b864f0a1638489d412fb`
+      );
+      setCurrentJob(getDefaultJob.data);
+    };
+    loadDefaultJob();
+  }, []);
 
   return (
     <motion.div
@@ -63,17 +84,17 @@ const Careers = () => {
         <ToastContainer autoClose={2000} className="toast-container" />
         <h1 className="career-title">Career Opportunities</h1>
 
-        <div className="row justify-content-center mt-5">
-          {jobs.map((job) => (
-            <div className="col-md-4" key={job._id}>
-              <div className="card job-card shadow-sm mb-4">
-                <div className="apply-btn">
-                  <Link to={`/get-current-job/${job._id}`}>
-                    <button className="btn btn-sm btn-outline-secondary">
-                      Apply
-                    </button>
-                  </Link>
-                </div>
+        <div className="row mt-5">
+          <div
+            className="col-md-5 scroll px-5"
+            style={{ overflowY: "scroll", height: "60vh" }}
+          >
+            {jobs.map((job) => (
+              <div
+                onClick={(e) => loadCurrentJob(job._id, e)}
+                className="card job-card shadow-sm mb-4"
+                key={job._id}
+              >
                 <div className="card-body">
                   <h5 className="card-title">{job.designation}</h5>
                   <span>
@@ -93,46 +114,90 @@ const Careers = () => {
                   <p className="card-text mt-2 skills">{job.skills}</p>
                 </div>
               </div>
-            </div>
-          ))}
-          <div className="col-md-12 mt-5">
-            <p className="fw-bold">
-              Interested candidates to send their profile to hr@uvxcel.com OR
-              use the link below to fill the Candidate Information Form.
-              <br />
-              <Link className="" style={{ color: "blue" }} to="/applyform">
-                Candidate Form
-              </Link>
-            </p>
+            ))}
+          </div>
+          <div className="col-md-7">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className=" mt-2 container-fluid job-description"
+            >
+              <div className="row justify-content-center">
+                <div className="col-md-10">
+                  <div className="card px-2 shadow-sm">
+                    <div className="card-body">
+                      <h2 className="card-title text-center">
+                        {currentJob.designation}
+                      </h2>
+                      <hr />
+                      <p className="card-text">
+                        <b>Experience:</b> {currentJob.experience}
+                      </p>
+                      <p className="card-text">
+                        <b>Salary:</b> {currentJob.salary}
+                      </p>
+                      <p className="card-text">
+                        <b>Loaction:</b> {currentJob.location}
+                      </p>
+                      <p className="card-text">
+                        <b>Skills:</b> {currentJob.skills}
+                      </p>
+                      <Link className="btn btn-info" to="/applyform">
+                        Quick apply
+                      </Link>
+                    </div>
+                  </div>
+                  <p className="fw-bold mt-5">
+                    Interested candidates to send their profile to hr@uvxcel.com
+                    OR use the link below to fill the Candidate Information
+                    Form.
+                    <br />
+                    <Link
+                      className=""
+                      style={{ color: "blue" }}
+                      to="/applyform"
+                    >
+                      Candidate Form
+                    </Link>
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
 
-        <form onSubmit={(e) => onSubmit(e)} className="newsletter">
-          <div className="row justify-content-start">
-            <div className="col-md-8 col-12">
-              <input
-                onChange={(e) => onEmailChange(e)}
-                name="email"
-                value={email}
-                type="text"
-                id="email"
-                placeholder="Enter email to Subscribe news and updates"
-                className="form-control"
-                required
-              />
-            </div>
-            <div className="col-md-4 col-12">
-              <button className="main-btn" type="submit">
-                Subscribe
-              </button>
-            </div>
+        <div className="row my-5 justify-content-center">
+          <div className="col-md-6">
+            <form onSubmit={(e) => onSubmit(e)} className="newsletter">
+              <div className="row justify-content-start">
+                <div className="col-md-8 col-12">
+                  <input
+                    onChange={(e) => onEmailChange(e)}
+                    name="email"
+                    value={email}
+                    type="text"
+                    id="email"
+                    placeholder="Enter email to Subscribe news and updates"
+                    className="form-control"
+                    required
+                  />
+                </div>
+                <div className="col-md-4 col-12">
+                  <button className="main-btn" type="submit">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+              {emailErr ? (
+                <span className="text-danger">Email is not Valid</span>
+              ) : (
+                ""
+              )}
+            </form>
           </div>
-          {emailErr ? (
-            <span className="text-danger">Email is not Valid</span>
-          ) : (
-            ""
-          )}
-        </form>
+        </div>
       </div>
     </motion.div>
   );

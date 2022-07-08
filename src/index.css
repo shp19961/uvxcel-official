@@ -26,7 +26,6 @@
 .services,
 .technologies,
 .careers,
-.current-job,
 .contact {
   padding-top: 100px;
   min-height: 100vh !important;
@@ -267,7 +266,8 @@
   transition: .4s ease-in-out;
 }
 
-.job-card .card-title, .current-job .card-title {
+.job-card .card-title,
+.job-description .card-title {
   color: orange;
 }
 
@@ -298,8 +298,8 @@
 }
 
 .newsletter {
-  width: 40%;
-  margin: 2rem auto;
+  width: 80%;
+  margin: 2rem 0;
 }
 
 
@@ -338,7 +338,21 @@
   border-color: red;
 }
 
+.scroll::-webkit-scrollbar {
+  width: 12px;
+}
 
+.scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
 
 
 /* Contact us Form Styles */
