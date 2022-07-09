@@ -58,8 +58,11 @@ const Careers = () => {
     const getCurrentJob = await axios.get(
       `http://localhost:5004/get-current-job/${id}`
     );
+    document.querySelectorAll(".job-card").forEach((card) => {
+      card.classList.remove("active-job");
+    });
+    e.target.closest(".card").classList.add("active-job");
     setCurrentJob(getCurrentJob.data);
-    console.log(e.target);
   };
 
   useEffect(() => {
@@ -68,6 +71,9 @@ const Careers = () => {
         `http://localhost:5004/get-current-job/62c7b864f0a1638489d412fb`
       );
       setCurrentJob(getDefaultJob.data);
+      setTimeout(() => {
+        document.querySelectorAll(".job-card")[0].classList.add("active-job");
+      }, 200);
     };
     loadDefaultJob();
   }, []);
