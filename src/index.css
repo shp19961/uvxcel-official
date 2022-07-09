@@ -266,16 +266,15 @@
   transition: .4s ease-in-out;
 }
 
+.job-card:hover {
+  cursor: pointer;
+}
+
 .job-card .card-title,
 .job-description .card-title {
   color: orange;
 }
 
-/* .job-card:hover {
-  background: black;
-  color: white;
-  transition: .4s ease-in-out;
-} */
 
 .apply-btn {
   position: absolute;
@@ -344,7 +343,7 @@
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
-.active-job{
+.active-job {
   background: black !important;
   color: white;
   transition: .4s ease-in-out;
