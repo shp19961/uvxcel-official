@@ -18,6 +18,11 @@ const Careers = () => {
     const getAllJobs = async () => {
       const getJobs = await axios.get(`http://localhost:5004/get-jobs`);
       setJobs(getJobs.data);
+      // load first job for showing active on page refresh
+      setCurrentJob(getJobs.data[0]);
+      setTimeout(() => {
+        document.querySelectorAll(".job-card")[0].classList.add("active-job");
+      }, 200);
     };
     getAllJobs();
   }, []);
@@ -54,28 +59,17 @@ const Careers = () => {
   };
 
   const loadCurrentJob = async (id, e) => {
-    const getCurrentJob = await axios.get(
-      `http://localhost:5004/get-current-job/${id}`
-    );
+    for (let job of jobs) {
+      if (job._id === id) {
+        console.log("matched");
+        setCurrentJob(job);
+      }
+    }
     document.querySelectorAll(".job-card").forEach((card) => {
       card.classList.remove("active-job");
     });
     e.target.closest(".card").classList.add("active-job");
-    setCurrentJob(getCurrentJob.data);
   };
-
-  useEffect(() => {
-    const loadDefaultJob = async () => {
-      const getDefaultJob = await axios.get(
-        `http://localhost:5004/get-current-job/62cbb893d7840146a63a3f6a`
-      );
-      setCurrentJob(getDefaultJob.data);
-      setTimeout(() => {
-        document.querySelectorAll(".job-card")[0].classList.add("active-job");
-      }, 200);
-    };
-    loadDefaultJob();
-  }, []);
 
   return (
     <motion.div
@@ -126,13 +120,7 @@ const Careers = () => {
           </div>
           <hr className="d-md-none d-block my-4" />
           <div className="col-lg-7 col-md-6">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.4 }}
-              className="container-fluid job-description"
-            >
+            <div className="container-fluid job-description">
               <div className="row justify-content-center">
                 <div className="col-md-12 col-lg-11">
                   <div className="card job-description-card shadow-sm">
@@ -199,7 +187,7 @@ const Careers = () => {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
 

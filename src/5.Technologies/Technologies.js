@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
 import { images } from "./Imported-Images";
-// import Swiper bundle with all modules installed
 import Swiper from "swiper/bundle";
-
-// import styles bundle
 import "swiper/css/bundle";
 import { motion } from "framer-motion";
 
