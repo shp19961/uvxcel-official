@@ -18,11 +18,11 @@ const Careers = () => {
     const getAllJobs = async () => {
       const getJobs = await axios.get(`http://localhost:5004/get-jobs`);
       setJobs(getJobs.data);
-      // load first job for showing active on page refresh
+      // load first job for showing active on refreshing the page
       setCurrentJob(getJobs.data[0]);
       setTimeout(() => {
         document.querySelectorAll(".job-card")[0].classList.add("active-job");
-      }, 200);
+      });
     };
     getAllJobs();
   }, []);
@@ -61,7 +61,6 @@ const Careers = () => {
   const loadCurrentJob = async (id, e) => {
     for (let job of jobs) {
       if (job._id === id) {
-        console.log("matched");
         setCurrentJob(job);
       }
     }

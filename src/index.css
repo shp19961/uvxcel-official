@@ -536,6 +536,10 @@ footer p .icons:hover {
     height: 41vh;
   }
 
+  .job-description-card .card-body {
+    height: 50vh;
+  }
+
   .newsletter {
     width: 100%;
   }
