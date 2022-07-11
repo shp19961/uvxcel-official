@@ -7,7 +7,7 @@
         "skills": "Python,Django,Mysql,Bootstrap",
         "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid accusamus expedita, accusantiumLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid accusamus expedita, accusantiumLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid accusamus expedita, accusantiumLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid accusamus expedita, accusantium",
         "type": "full time",
-        "shift": "Day shift",
+        "shifts": "Day shift",
         "positions": 2
     },
     {
@@ -18,7 +18,7 @@
         "skills": "SQL,Postgres,DBT,Python,Packages,Airflow,PyTest,Docker",
         "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid accusamus expedita, accusantiumLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid accusamus expedita, accusantiumLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid accusamus expedita, accusantiumLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid accusamus expedita, accusantium",
         "type": "full time",
-        "shift": "Day shift",
+        "shifts": "Day shift",
         "positions": 1
     },
     {
@@ -29,7 +29,7 @@
         "skills": "ReactJs,Mongodb,Nodejs,Git,Bootstrap",
         "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid accusamus expedita, accusantiumLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid accusamus expedita, accusantiumLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid accusamus expedita, accusantiumLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid accusamus expedita, accusantium",
         "type": "full time",
-        "shift": "Day shift",
+        "shifts": "Day shift",
         "positions": 1
     },
     {
@@ -40,7 +40,7 @@
         "skills": "Angular,Mongodb,Nodejs,Git,Bootstrap",
         "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid accusamus expedita, accusantiumLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid accusamus expedita, accusantiumLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid accusamus expedita, accusantiumLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid accusamus expedita, accusantium",
         "type": "full time",
-        "shift": "Day shift",
+        "shifts": "Day shift",
         "positions": 1
     }
 ]

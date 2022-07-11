@@ -150,7 +150,7 @@ const Careers = () => {
                       </p>
                       <p className="card-text">Job type: {currentJob.type}</p>
                       <p className="card-text">Skills: {currentJob.skills}</p>
-                      <p className="card-text">Schedule: {currentJob.shift}</p>
+                      <p className="card-text">Schedule: {currentJob.shifts}</p>
                       <span className="card-text">
                         Benefits:
                         <ul>
