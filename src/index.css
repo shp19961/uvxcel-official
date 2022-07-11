@@ -294,7 +294,8 @@
   height: 43vh;
 }
 
-.job-description-card .card-body p {
+.job-description-card .card-body p,
+span {
   font-size: 14px;
 }
 
@@ -303,7 +304,7 @@
 }
 
 .job-description-card .card-body {
-  margin-top: 11rem !important;
+  margin-top: 10.5rem !important;
 }
 
 .apply-btn {

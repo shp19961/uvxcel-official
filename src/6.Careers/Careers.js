@@ -12,6 +12,7 @@ const Careers = () => {
   const [emailErr, setEmailErr] = useState(false);
 
   const [jobs, setJobs] = useState([]);
+  const [currentJob, setCurrentJob] = useState([]);
 
   useEffect(() => {
     const getAllJobs = async () => {
@@ -52,8 +53,6 @@ const Careers = () => {
     console.warn(currentJob);
   };
 
-  const [currentJob, setCurrentJob] = useState([]);
-
   const loadCurrentJob = async (id, e) => {
     const getCurrentJob = await axios.get(
       `http://localhost:5004/get-current-job/${id}`
@@ -68,7 +67,7 @@ const Careers = () => {
   useEffect(() => {
     const loadDefaultJob = async () => {
       const getDefaultJob = await axios.get(
-        `http://localhost:5004/get-current-job/62c7b864f0a1638489d412fb`
+        `http://localhost:5004/get-current-job/62cbb893d7840146a63a3f6a`
       );
       setCurrentJob(getDefaultJob.data);
       setTimeout(() => {
@@ -155,31 +154,26 @@ const Careers = () => {
                       </Link>
                     </div>
                     <div className="card-body">
+                      <h5 className="fw-bold">Full Job Description</h5>
                       <p className="card-text">
-                        <h5 className="fw-bold">Full Job Description</h5>
                         <br />
-                        <span>
-                          Lorem ipsum dolor sit amet consectetur, adipisicing
-                          elit. Perferendis aliquid accusamus expedita,
-                          accusantium qui veniam voluptatibus natus vel corporis
-                          aut? Tempore obcaecati numquam exercitationem iusto
-                          esse reiciendis corrupti adipisci.
-                        </span>
+                        <span>{currentJob.desc}</span>
                       </p>
-                      <p className="card-text">Job type: Full time</p>
+                      <p className="card-text">Job type: {currentJob.type}</p>
                       <p className="card-text">Skills: {currentJob.skills}</p>
-                      <p className="card-text">Schedule: Day Shift</p>
-                      <p className="card-text">
+                      <p className="card-text">Schedule: {currentJob.shift}</p>
+                      <span className="card-text">
                         Benefits:
                         <ul>
                           <li>Cell phone reimbursement</li>
                           <li>Internet reimbursement</li>
                         </ul>
-                      </p>
+                      </span>
                       <hr />
                       <h5 className="fw-bold">Hiring Insights</h5>
                       <p>
-                        <FaUserPlus /> Hiring 1 candidate for this role
+                        <FaUserPlus /> Hiring {currentJob.positions} candidate
+                        for this role
                       </p>
                       <p>
                         <FaClock /> Urgently hiring
