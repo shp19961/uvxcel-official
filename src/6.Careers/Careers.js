@@ -218,6 +218,11 @@ const Careers = () => {
                     className="form-control"
                     required
                   />
+                  {emailErr ? (
+                    <p className="text-danger">Email is not Valid</p>
+                  ) : (
+                    ""
+                  )}
                 </div>
                 <div className="col-md-4 col-12">
                   <button className="main-btn" type="submit">
@@ -225,11 +230,6 @@ const Careers = () => {
                   </button>
                 </div>
               </div>
-              {emailErr ? (
-                <p className="text-danger">Email is not Valid</p>
-              ) : (
-                ""
-              )}
             </form>
           </div>
         </div>

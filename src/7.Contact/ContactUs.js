@@ -188,9 +188,7 @@ const ContactUs = () => {
                     />
                   </div>
                   {nameErr ? (
-                    <p className="text-danger">
-                      Min 4 characters required
-                    </p>
+                    <p className="text-danger">Min 4 characters required</p>
                   ) : (
                     ""
                   )}

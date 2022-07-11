@@ -81,7 +81,7 @@ const AboutUs = () => {
             <div
               className="col-md-6 col-lg-4"
               data-aos="fade-left"
-              data-aos-duration="600"
+              data-aos-duration="800"
             >
               <div className="single-promo-hover single-promo-1 text-center">
                 <div className="circle-icon">

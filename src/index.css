@@ -53,7 +53,6 @@
   border: none !important;
 }
 
-
 .nav-item>.active,
 .nav-item>.active:hover {
   color: red !important;
@@ -297,6 +296,7 @@
 .job-description-card .card-body {
   overflow-y: scroll;
   height: 43vh;
+  margin-top: 10.5rem !important;
 }
 
 .job-description-card .card-body p,
@@ -306,10 +306,6 @@ span {
 
 .job-description-card .card-head p {
   margin-bottom: 0;
-}
-
-.job-description-card .card-body {
-  margin-top: 10.5rem !important;
 }
 
 .apply-btn {
@@ -460,6 +456,16 @@ footer p .icons:hover {
     min-height: 80vh !important;
   }
 
+  /* Navbar */
+  .navbar {
+    text-align: center;
+  }
+
+  .nav-item>.active,
+  .nav-item>.active:hover {
+    border-bottom: none;
+  }
+
   /* Home */
   .carousel-inner {
     height: 435px;
@@ -490,6 +496,12 @@ footer p .icons:hover {
 }
 
 @media (max-width:767px) {
+
+  /* Navbar */
+  .nav-item>.active,
+  .nav-item>.active:hover {
+    border-bottom: none;
+  }
 
   /* Home */
   .carousel-inner {
