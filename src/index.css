@@ -268,7 +268,7 @@
 
 .scroll {
   overflow-y: scroll;
-  height: 65vh;
+  height: 63vh;
 }
 
 .job-card {
@@ -295,7 +295,7 @@
 
 .job-description-card .card-body {
   overflow-y: scroll;
-  height: 43vh;
+  height: 40vh;
   margin-top: 10.5rem !important;
 }
 
@@ -549,4 +549,9 @@ footer p .icons:hover {
     margin-top: 1rem;
   }
 
+}
+
+
+.search-job {
+  border-radius: 15px !important;
 }
