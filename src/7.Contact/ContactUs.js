@@ -132,14 +132,14 @@ const ContactUs = () => {
       </div>
       <div className="container-fluid">
         <div className="row mt-md-5 mt-4 justify-content-evenly">
-          <div className="col-md-5 mt-1">
+          <div className="col-lg-5 col-md-6 mt-1">
             <div className="address">
               <h4 className="mb-4">Our Office</h4>
               <p>
                 <GrLocation />
                 <span className="mx-2">
                   Unit No. 223, Goodwill SquareMall, Dhanori, Pune,{" "}
-                  <span className="mx-4 mx-md-0">Maharashtra, India.</span>
+                  <span className="mx-4 mx-lg-0">Maharashtra, India.</span>
                 </span>
               </p>
               <p className="bg-light">
@@ -158,7 +158,7 @@ const ContactUs = () => {
                 <MdCall />
                 <span className="mx-2">
                   For Enquiry: +91-20-67026259 |{" "}
-                  <span className="mx-4 mx-md-0">marketing@uvxcel.com</span>
+                  <span className="mx-4 mx-lg-0">marketing@uvxcel.com</span>
                 </span>
               </p>
               <hr />
@@ -188,9 +188,9 @@ const ContactUs = () => {
                     />
                   </div>
                   {nameErr ? (
-                    <span className="text-danger">
+                    <p className="text-danger">
                       Min 4 characters required
-                    </span>
+                    </p>
                   ) : (
                     ""
                   )}
@@ -209,12 +209,12 @@ const ContactUs = () => {
                     />
                   </div>
                   {emailErr ? (
-                    <span className="text-danger">Email is not Valid</span>
+                    <p className="text-danger">Email is not Valid</p>
                   ) : (
                     ""
                   )}
                 </div>
-                <div className="col-md-6 col-12">
+                <div className="col-lg-6 col-12">
                   <div className="form-group mb-4">
                     <div className="input-group">
                       <select
@@ -247,16 +247,16 @@ const ContactUs = () => {
                         required
                       />
                       {mobileErr ? (
-                        <span className="text-danger">
+                        <p className="text-danger">
                           Please enter valid mobile number
-                        </span>
+                        </p>
                       ) : (
                         ""
                       )}
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6 col-12">
+                <div className="col-lg-6 col-12">
                   <div className="form-group mb-4">
                     <select
                       className="form-select form-control p-2"
@@ -287,9 +287,7 @@ const ContactUs = () => {
                       required
                     />
                     {helpErr ? (
-                      <span className="text-danger">
-                        Please enter something
-                      </span>
+                      <p className="text-danger">Please enter something</p>
                     ) : (
                       ""
                     )}

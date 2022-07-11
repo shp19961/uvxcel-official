@@ -13,8 +13,9 @@ const AboutUs = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
+      className="about"
     >
-      <section className="about">
+      <section>
         <div className="container mb-5">
           <div className="row about-image mt-2">
             <h1 className="about-title mb-4 text-center">About Us</h1>
@@ -61,7 +62,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <section className="promo-section py-5">
+      <section className="promo-section py-lg-5">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-7 col-md-8 col-12">

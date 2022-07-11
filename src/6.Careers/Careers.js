@@ -90,7 +90,7 @@ const Careers = () => {
         <h1 className="career-title">Career Opportunities</h1>
 
         <div className="row mt-md-5 mt-4">
-          <div className="col-md-5 scroll px-md-5">
+          <div className="col-lg-5 col-md-6 scroll px-md-5">
             {jobs.map((job) => (
               <div
                 onClick={(e) => loadCurrentJob(job._id, e)}
@@ -125,7 +125,7 @@ const Careers = () => {
             ))}
           </div>
           <hr className="d-md-none d-block my-4" />
-          <div className="col-md-7">
+          <div className="col-lg-7 col-md-6">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -134,9 +134,9 @@ const Careers = () => {
               className="container-fluid job-description"
             >
               <div className="row justify-content-center">
-                <div className="col-md-10">
+                <div className="col-md-12 col-lg-11">
                   <div className="card job-description-card shadow-sm">
-                    <div className="card-head  p-3">
+                    <div className="card-head p-3">
                       <h5 className="card-title">{currentJob.designation}</h5>
                       <p>
                         <MdLocationOn />
@@ -203,11 +203,11 @@ const Careers = () => {
           </div>
         </div>
 
-        <div className="row my-5 justify-content-center">
-          <div className="col-md-6 col-10">
+        <div className="row  justify-content-center">
+          <div className="col-lg-8 col-md-9 col-12">
             <form onSubmit={(e) => onSubmit(e)} className="newsletter">
               <div className="row">
-                <div className="col-md-8 col-12">
+                <div className="col-12 col-md-8">
                   <input
                     onChange={(e) => onEmailChange(e)}
                     name="email"
@@ -226,7 +226,7 @@ const Careers = () => {
                 </div>
               </div>
               {emailErr ? (
-                <span className="text-danger">Email is not Valid</span>
+                <p className="text-danger">Email is not Valid</p>
               ) : (
                 ""
               )}
