@@ -64,11 +64,9 @@ const AboutUs = () => {
       <section className="promo-section py-5">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-7 col-md-8">
+            <div className="col-lg-7 col-md-8 col-12">
               <div className="section-heading text-center">
-                <h1>
-                  <span>Current Engagement</span>
-                </h1>
+                <h1>Current Engagement</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
                   <br />

@@ -258,7 +258,7 @@
 
 .career-title {
   text-align: center;
-  font-size: 35px !important;
+  font-size: 30px !important;
   font-weight: bold;
 }
 
@@ -433,3 +433,54 @@ footer p .icons:hover {
 }
 
 /* Media Queries */
+
+
+
+
+@media (max-width:767px) {
+
+  /* Home */
+  .carousel-inner {
+    height: 225px;
+  }
+
+  .carousel-inner img {
+    height: 225px !important;
+  }
+
+  /* About */
+  .about-text {
+    font-size: smaller;
+  }
+
+  .promo-section {
+    overflow-x: hidden;
+  }
+
+  /* Technologies */
+  .swiper-slide {
+    width: 170px !important;
+  }
+
+  .swiper-slide .slider-image img {
+    height: 120px !important;
+  }
+
+  /* Careers */
+
+  .scroll {
+    height: 41vh;
+  }
+
+  .newsletter {
+    width: 100%;
+  }
+
+  .newsletter .main-btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* Contact */
+
+}

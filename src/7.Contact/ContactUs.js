@@ -130,15 +130,16 @@ const ContactUs = () => {
           <h1 className="fw-bold">Contact Us</h1>
         </div>
       </div>
-      <div className="container">
-        <div className="row mt-5">
+      <div className="container-fluid">
+        <div className="row mt-md-5 mt-4 justify-content-evenly">
           <div className="col-md-5 mt-1">
             <div className="address">
               <h4 className="mb-4">Our Office</h4>
               <p>
                 <GrLocation />
                 <span className="mx-2">
-                  Unit No. 223, Goodwill SquareMall, Dhanori, Pune
+                  Unit No. 223, Goodwill SquareMall, Dhanori, Pune,{" "}
+                  <span className="mx-4 mx-md-0">Maharashtra, India.</span>
                 </span>
               </p>
               <p className="bg-light">
@@ -156,7 +157,8 @@ const ContactUs = () => {
               <p>
                 <MdCall />
                 <span className="mx-2">
-                  For Enquiry: +91-20-67026259 | marketing@uvxcel.com
+                  For Enquiry: +91-20-67026259 |{" "}
+                  <span className="mx-4 mx-md-0">marketing@uvxcel.com</span>
                 </span>
               </p>
               <hr />
@@ -169,10 +171,10 @@ const ContactUs = () => {
               <hr />
             </div>
           </div>
-          <div className="col-md-7 mt-5">
+          <div className="col-md-5 mt-5">
             <form onSubmit={(e) => onSubmit(e)}>
-              <div className="row justify-content-end">
-                <div className="mb-4 col-5">
+              <div className="row justify-content-center">
+                <div className="mb-4 col-6">
                   <div className="form-group">
                     <input
                       onChange={(e) => onNameChange(e)}
@@ -193,7 +195,7 @@ const ContactUs = () => {
                     ""
                   )}
                 </div>
-                <div className="mb-4 col-5">
+                <div className="mb-4 col-6">
                   <div className="form-group">
                     <input
                       onChange={(e) => onEmailChange(e)}
@@ -212,13 +214,13 @@ const ContactUs = () => {
                     ""
                   )}
                 </div>
-                <div className="col-5">
+                <div className="col-md-6 col-12">
                   <div className="form-group mb-4">
                     <div className="input-group">
                       <select
                         id="mySelect"
                         style={{
-                          width: "117px",
+                          width: "116px",
                           border: "2px solid orange",
                         }}
                         onChange={(e) => {
@@ -254,7 +256,7 @@ const ContactUs = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-5">
+                <div className="col-md-6 col-12">
                   <div className="form-group mb-4">
                     <select
                       className="form-select form-control p-2"
@@ -269,7 +271,7 @@ const ContactUs = () => {
                     </select>
                   </div>
                 </div>
-                <div className="col-10">
+                <div className="col-12">
                   <div className="form-group mb-4">
                     <textarea
                       maxLength={45}
@@ -293,7 +295,7 @@ const ContactUs = () => {
                     )}
                   </div>
                 </div>
-                <span className="form-group col-10">
+                <span className="form-group col-12">
                   <button
                     style={{ width: "100%" }}
                     type="submit"

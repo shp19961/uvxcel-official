@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="container-fluid bg-dark text-white">
       <div className="container">
         <div className="row justify-content-around py-5">
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-8">
             <h2>uvXcel</h2>
             <p>United We Excel</p>
             <p>
@@ -15,7 +15,7 @@ const Footer = () => {
               error.
             </p>
           </div>
-          <div className="col-lg-2">
+          <div className="col-lg-2 col-4">
             <h6>Explore</h6>
             <p>
               <Link className="explore-link" to="/">
@@ -41,15 +41,17 @@ const Footer = () => {
               </Link>
             </p>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-8 mt-3 mt-lg-0">
             <h6>Visit</h6>
             <p>Unit No. 223,Goodwill SquareMall, </p>
             <p>Dhanori, Pune, Maharashtra, India.</p>
-            <h6 className="mt-3">Enquiry</h6>
-            <p>hr@uvxcel.com</p>
-            <p>+91-20-67026259</p>
+            <div className="d-md-block d-none">
+              <h6 className="mt-3">Enquiry</h6>
+              <p>hr@uvxcel.com</p>
+              <p>+91-20-67026259</p>
+            </div>
           </div>
-          <div className="col-lg-2">
+          <div className="col-lg-2 col-4 mt-3 mt-lg-0">
             <h6>Follow</h6>
             <p>
               <a href="https://www.linkedin.com/company/uvxcel-it-solutions/mycompany/">
@@ -62,7 +64,12 @@ const Footer = () => {
               </a>
             </p>
           </div>
-          <div className="col-lg-2">
+          <div className="col-8 d-md-none d-block">
+            <h6 className="mt-3">Enquiry</h6>
+            <p>hr@uvxcel.com</p>
+            <p>+91-20-67026259</p>
+          </div>
+          <div className="col-lg-2 col-4 mt-3 mt-lg-0">
             <h6>Legal</h6>
             <p>Terms</p>
             <p>Privacy</p>

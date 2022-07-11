@@ -89,8 +89,8 @@ const Careers = () => {
         <ToastContainer autoClose={2000} className="toast-container" />
         <h1 className="career-title">Career Opportunities</h1>
 
-        <div className="row mt-5">
-          <div className="col-md-5 scroll px-5">
+        <div className="row mt-md-5 mt-4">
+          <div className="col-md-5 scroll px-md-5">
             {jobs.map((job) => (
               <div
                 onClick={(e) => loadCurrentJob(job._id, e)}
@@ -124,6 +124,7 @@ const Careers = () => {
               </div>
             ))}
           </div>
+          <hr className="d-md-none d-block my-4" />
           <div className="col-md-7">
             <motion.div
               initial={{ opacity: 0 }}
@@ -203,9 +204,9 @@ const Careers = () => {
         </div>
 
         <div className="row my-5 justify-content-center">
-          <div className="col-md-6">
+          <div className="col-md-6 col-10">
             <form onSubmit={(e) => onSubmit(e)} className="newsletter">
-              <div className="row justify-content-start">
+              <div className="row">
                 <div className="col-md-8 col-12">
                   <input
                     onChange={(e) => onEmailChange(e)}
