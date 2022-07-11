@@ -147,6 +147,9 @@ const Careers = () => {
                         <br />
                         <span>{currentJob.desc}</span>
                       </p>
+                      <p className="card-text">
+                        Experience: {currentJob.experience} Years
+                      </p>
                       <p className="card-text">Job type: {currentJob.type}</p>
                       <p className="card-text">Skills: {currentJob.skills}</p>
                       <p className="card-text">Schedule: {currentJob.shifts}</p>
