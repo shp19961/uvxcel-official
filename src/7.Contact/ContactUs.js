@@ -171,7 +171,7 @@ const ContactUs = () => {
               <hr />
             </div>
           </div>
-          <div className="col-md-5 mt-5">
+          <div className="col-md-5 mt-5 mb-5 mb-md-0">
             <form onSubmit={(e) => onSubmit(e)}>
               <div className="row justify-content-center">
                 <div className="mb-4 col-6">
