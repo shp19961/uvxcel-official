@@ -262,6 +262,11 @@
   font-weight: bold;
 }
 
+.scroll {
+  overflow-y: scroll;
+  height: 65vh;
+}
+
 .job-card {
   transition: .4s ease-in-out;
 }
@@ -275,6 +280,27 @@
   color: orange;
 }
 
+.job-description-card .card-head {
+  position: absolute;
+  background: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 4px 0;
+}
+
+.job-description-card-body {
+  overflow-y: scroll;
+  height: 43vh;
+}
+
+.job-description-card .card-head p {
+  margin-bottom: 0;
+}
+
+.job-description-card .card-body {
+  margin-top: 10rem !important;
+}
 
 .apply-btn {
   position: absolute;

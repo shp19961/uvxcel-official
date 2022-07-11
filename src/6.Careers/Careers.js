@@ -91,10 +91,7 @@ const Careers = () => {
         <h1 className="career-title">Career Opportunities</h1>
 
         <div className="row mt-5">
-          <div
-            className="col-md-5 scroll px-5"
-            style={{ overflowY: "scroll", height: "60vh" }}
-          >
+          <div className="col-md-5 scroll px-5">
             {jobs.map((job) => (
               <div
                 onClick={(e) => loadCurrentJob(job._id, e)}
@@ -132,17 +129,18 @@ const Careers = () => {
             >
               <div className="row justify-content-center">
                 <div className="col-md-10">
-                  <div className="card px-2 shadow-sm">
-                    <div className="card-body">
-                      <h2 className="card-title text-center">
-                        {currentJob.designation}
-                      </h2>
-                      <hr />
+                  <div className="card job-description-card shadow-sm">
+                    <div className="card-head  p-3">
+                      <h5 className="card-title">{currentJob.designation}</h5>
+                      <p>{currentJob.location}</p>
+                      <p>{currentJob.salary}</p>
+                      <Link className="btn btn-info mt-2" to="/applyform">
+                        Apply now
+                      </Link>
+                    </div>
+                    <div className="card-body job-description-card-body">
                       <p className="card-text">
                         <b>Experience:</b> {currentJob.experience}
-                      </p>
-                      <p className="card-text">
-                        <b>Salary:</b> {currentJob.salary}
                       </p>
                       <p className="card-text">
                         <b>Loaction:</b> {currentJob.location}
@@ -150,9 +148,26 @@ const Careers = () => {
                       <p className="card-text">
                         <b>Skills:</b> {currentJob.skills}
                       </p>
-                      <Link className="btn btn-info" to="/applyform">
-                        Quick apply
-                      </Link>
+                      <p className="card-text">
+                        <b>Full job description:</b> Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit. Perferendis aliquid
+                        accusamus expedita, accusantium qui veniam voluptatibus
+                        natus vel corporis aut? Tempore obcaecati numquam
+                        exercitationem iusto esse reiciendis corrupti adipisci.
+                        Dolores nobis alias sit quidem quasi nostrum maiores
+                        placeat, omnis quisquam! Lorem, ipsum dolor sit amet
+                        consectetur adipisicing elit. Dolorem quo dolore numquam
+                        voluptates culpa modi sequi ex, magnam inventore, sunt
+                        aperiam quaerat a deleniti unde nisi corporis vero id
+                        distinctio tempore, alias adipisci facere soluta
+                        aspernatur porro! Beatae delectus impedit unde
+                        voluptatibus magnam. Officiis culpa dolorem earum vero
+                        voluptatem quaerat veritatis corporis recusandae ea
+                        repellat minima quasi dignissimos dicta, facilis natus!
+                        Ea debitis eum quam doloribus numquam, itaque odio est
+                        veritatis rem, eos porro. Labore non necessitatibus nisi
+                        ab dolorem.
+                      </p>
                     </div>
                   </div>
                   <p className="fw-bold mt-5">
