@@ -130,7 +130,7 @@ const Careers = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.4 }}
-              className=" mt-2 container-fluid job-description"
+              className="container-fluid job-description"
             >
               <div className="row justify-content-center">
                 <div className="col-md-10">
@@ -172,7 +172,10 @@ const Careers = () => {
                       <hr />
                       <h5 className="fw-bold">Hiring Insights</h5>
                       <p>
-                        <FaUserPlus /> Hiring {currentJob.positions} candidate
+                        <FaUserPlus /> Hiring{" "}
+                        {currentJob.positions > 1
+                          ? currentJob.positions + " candidates "
+                          : "1 candidate "}
                         for this role
                       </p>
                       <p>
