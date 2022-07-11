@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { motion } from "framer-motion";
-import { BsFillBriefcaseFill } from "react-icons/bs";
-import { FaRupeeSign } from "react-icons/fa";
+import { BsFillBriefcaseFill, BsCashStack } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
+import { FaUserPlus, FaClock } from "react-icons/fa";
 
 const Careers = () => {
   const [email, setEmail] = useState("");
@@ -106,15 +106,21 @@ const Careers = () => {
                   </span>
 
                   <span className="mx-2">
-                    <FaRupeeSign size={14} />
-                    <span className="mx-1">{job.salary}</span>
+                    <BsCashStack />
+                    <span className="mx-1">
+                      {job.salary ? job.salary : "Not Mentioned"}
+                    </span>
                   </span>
 
                   <span className="mx-2">
                     <MdLocationOn />
                     <span className="mx-1">{job.location}</span>
                   </span>
-                  <p className="card-text mt-2 skills">{job.skills}</p>
+                  <p className="card-text mt-2 skills">
+                    {job.skills
+                      ? job.skills.split(",").join(" . ")
+                      : "Not Available"}
+                  </p>
                 </div>
               </div>
             ))}
@@ -132,41 +138,51 @@ const Careers = () => {
                   <div className="card job-description-card shadow-sm">
                     <div className="card-head  p-3">
                       <h5 className="card-title">{currentJob.designation}</h5>
-                      <p>{currentJob.location}</p>
-                      <p>{currentJob.salary}</p>
+                      <p>
+                        <MdLocationOn />
+                        <span className="mx-2">{currentJob.location}</span>
+                      </p>
+                      <p>
+                        <BsCashStack />
+                        <span className="mx-2">
+                          {currentJob.salary
+                            ? currentJob.salary
+                            : "Not Mentioned"}
+                        </span>
+                      </p>
                       <Link className="btn btn-info mt-2" to="/applyform">
                         Apply now
                       </Link>
                     </div>
-                    <div className="card-body job-description-card-body">
+                    <div className="card-body">
                       <p className="card-text">
-                        <b>Experience:</b> {currentJob.experience}
+                        <h5 className="fw-bold">Full Job Description</h5>
+                        <br />
+                        <span>
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Perferendis aliquid accusamus expedita,
+                          accusantium qui veniam voluptatibus natus vel corporis
+                          aut? Tempore obcaecati numquam exercitationem iusto
+                          esse reiciendis corrupti adipisci.
+                        </span>
                       </p>
+                      <p className="card-text">Job type: Full time</p>
+                      <p className="card-text">Skills: {currentJob.skills}</p>
+                      <p className="card-text">Schedule: Day Shift</p>
                       <p className="card-text">
-                        <b>Loaction:</b> {currentJob.location}
+                        Benefits:
+                        <ul>
+                          <li>Cell phone reimbursement</li>
+                          <li>Internet reimbursement</li>
+                        </ul>
                       </p>
-                      <p className="card-text">
-                        <b>Skills:</b> {currentJob.skills}
+                      <hr />
+                      <h5 className="fw-bold">Hiring Insights</h5>
+                      <p>
+                        <FaUserPlus /> Hiring 1 candidate for this role
                       </p>
-                      <p className="card-text">
-                        <b>Full job description:</b> Lorem ipsum dolor sit amet
-                        consectetur, adipisicing elit. Perferendis aliquid
-                        accusamus expedita, accusantium qui veniam voluptatibus
-                        natus vel corporis aut? Tempore obcaecati numquam
-                        exercitationem iusto esse reiciendis corrupti adipisci.
-                        Dolores nobis alias sit quidem quasi nostrum maiores
-                        placeat, omnis quisquam! Lorem, ipsum dolor sit amet
-                        consectetur adipisicing elit. Dolorem quo dolore numquam
-                        voluptates culpa modi sequi ex, magnam inventore, sunt
-                        aperiam quaerat a deleniti unde nisi corporis vero id
-                        distinctio tempore, alias adipisci facere soluta
-                        aspernatur porro! Beatae delectus impedit unde
-                        voluptatibus magnam. Officiis culpa dolorem earum vero
-                        voluptatem quaerat veritatis corporis recusandae ea
-                        repellat minima quasi dignissimos dicta, facilis natus!
-                        Ea debitis eum quam doloribus numquam, itaque odio est
-                        veritatis rem, eos porro. Labore non necessitatibus nisi
-                        ab dolorem.
+                      <p>
+                        <FaClock /> Urgently hiring
                       </p>
                     </div>
                   </div>

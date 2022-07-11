@@ -286,12 +286,16 @@
   top: 0;
   left: 0;
   right: 0;
-  box-shadow: 0 0 4px 0;
+  box-shadow: 0 0 2px 0;
 }
 
-.job-description-card-body {
+.job-description-card .card-body {
   overflow-y: scroll;
   height: 43vh;
+}
+
+.job-description-card .card-body p {
+  font-size: 14px;
 }
 
 .job-description-card .card-head p {
@@ -299,7 +303,7 @@
 }
 
 .job-description-card .card-body {
-  margin-top: 10rem !important;
+  margin-top: 11rem !important;
 }
 
 .apply-btn {
