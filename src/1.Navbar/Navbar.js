@@ -22,7 +22,7 @@ const Navbar = () => {
           aria-label="Toggle navigation"
         >
           <span className="">
-            <FaAlignJustify color="black" size={18} />
+            <FaAlignJustify color="black" size={21} />
           </span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">

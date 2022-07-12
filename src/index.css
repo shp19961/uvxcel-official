@@ -39,7 +39,7 @@
 }
 
 .navbar-collapse {
-  transition: 0.8s ease-in-out !important;
+  transition: .6s ease-in-out !important;
 }
 
 .navbar-brand {
@@ -154,8 +154,53 @@
 .about-text {
   text-align: justify;
   font-size: 16px;
-  line-height: 2.4rem;
+  line-height: 2.2rem;
 }
+
+
+/* Vision mission */
+#vision-mission {
+  overflow-x: hidden !important;
+}
+
+.bottom-content .card {
+  height: 370px;
+}
+
+.bottom-content .card-text {
+  font-size: 15px;
+}
+
+.bottom-content .card:hover {
+  border: 1px solid lightskyblue !important;
+}
+
+.bottom-content .card:hover img {
+  -webkit-filter: grayscale(100%) !important;
+  filter: grayscale(100%) !important;
+}
+
+/* Partners */
+.partners .swiper-slide {
+  display: flex;
+  justify-content: center;
+  width: 250px !important;
+  height: auto;
+}
+
+.partners .swiper-slide .slider-image img {
+  background-position: center;
+  height: 180px !important;
+}
+
+
+.partners .swiper-pagination-bullet {
+  width: 0.7rem !important;
+  height: 0.7rem !important;
+}
+
+
+
 
 /* Promo */
 .promo-section {
@@ -204,6 +249,7 @@
 
 
 
+
 /* Styles for Services.js */
 .services .card {
   height: 330px !important;
@@ -236,18 +282,18 @@
 
 /* Styles for Technologies.js */
 
-.app-screen {
+.technologies .app-screen {
   padding-bottom: 5.4rem;
 }
 
-.swiper-slide {
+.technologies .swiper-slide {
   display: flex;
   justify-content: center;
   width: 250px !important;
   height: auto;
 }
 
-.swiper-slide .slider-image img {
+.technologies .swiper-slide .slider-image img {
   background-position: center;
   height: 200px !important;
   object-fit: contain;
@@ -255,7 +301,7 @@
 }
 
 
-.swiper-pagination-bullet {
+.technologies .swiper-pagination-bullet {
   width: 0.7rem !important;
   height: 0.7rem !important;
 }
@@ -271,6 +317,7 @@
 }
 
 .search-job {
+  border-radius: 15px !important;
   box-shadow: none !important;
   border: 2px solid skyblue !important;
   font-weight: bold !important;
@@ -278,7 +325,7 @@
 
 .scroll {
   overflow-y: scroll;
-  height: 67vh;
+  height: 63vh;
 }
 
 .job-card {
@@ -305,7 +352,7 @@
 
 .job-description-card .card-body {
   overflow-y: scroll;
-  height: 44vh;
+  height: 41vh;
   margin-top: 10.5rem !important;
 }
 
@@ -492,6 +539,12 @@ footer hr {
     height: 435px !important;
   }
 
+  /* About */
+
+  .bottom-content .card {
+    height: 350px;
+  }
+
   /* Services */
   .services img {
     height: 44%;
@@ -544,11 +597,11 @@ footer hr {
     height: 100vh !important;
   }
 
-  .swiper-slide {
+  .technologies .swiper-slide {
     width: 170px !important;
   }
 
-  .swiper-slide .slider-image img {
+  .technologies .swiper-slide .slider-image img {
     height: 120px !important;
   }
 
@@ -571,9 +624,4 @@ footer hr {
     margin-top: 1rem;
   }
 
-}
-
-
-.search-job {
-  border-radius: 15px !important;
 }

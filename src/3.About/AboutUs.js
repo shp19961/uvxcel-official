@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { AiFillDatabase } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
 import { RiFileExcel2Fill } from "react-icons/ri";
 import Aos from "aos";
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
 
 const AboutUs = () => {
+  useEffect(() => {
+    new Swiper(".swiper-container.app-screen", {
+      effect: "coverflow",
+      fadeEffect: {
+        crossFade: true,
+      },
+      loop: true,
+      autoplaySpeed: 2000,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      autoplay: { delay: 2000, disableOnInteraction: true },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      paginationClickable: true,
+    });
+  }, []);
   Aos.init();
   return (
     <motion.div
@@ -20,6 +40,7 @@ const AboutUs = () => {
           <div className="row about-image mt-2">
             <h1 className="about-title mb-4 text-center">About Us</h1>
             <div className="col-12">
+              <h2 className="mb-4 fw-bold">Company Overview</h2>
               <div className="about-text">
                 <p>
                   <strong>uvXcel</strong> is contradictorily a startup that has
@@ -62,7 +83,123 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <section className="promo-section py-lg-5">
+
+      <section id="vision-mission">
+        <div className="container my-5">
+          <h2 className="mb-4 fw-bold">Mission, Vision &amp; Value</h2>
+
+          <div className="row bottom-content d-flex justify-content-center">
+            <div className="col-md-4 col-12">
+              <div
+                className="card mb-4 mb-md-0"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <img
+                  className="card-img-top"
+                  src="http://fastwpdemo.com/demo/consultive/wp-content/uploads/2022/04/1-4.jpg"
+                  alt="Awesome "
+                />
+                <div className="card-body">
+                  <h4 className="card-title text-center"> Our Mission </h4>
+                  <p className="card-text">
+                    We aim to emerge as the preferred technology partner for our
+                    clients, by powering them through innovative focused
+                    solutions for their real life problems.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-md-4 col-12"
+              data-aos="fade-left"
+              data-aos-duration="1400"
+            >
+              <div className="card mb-4 mb-md-0">
+                <img
+                  className="card-img-top"
+                  src="http://fastwpdemo.com/demo/consultive/wp-content/uploads/2022/04/2-4.jpg"
+                  alt="Awesome "
+                />
+                <div className="card-body">
+                  <h4 className="card-title text-center"> Our Vision </h4>
+                  <p className="card-text">
+                    Know how to pursue pleasure rationally encounter
+                    consequences that are extremely painful nor again is there
+                    anyone or pursues.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-md-4 col-12 "
+              data-aos="fade-left"
+              data-aos-duration="1800"
+            >
+              <div className="card">
+                <img
+                  className="card-img-top"
+                  src="http://fastwpdemo.com/demo/consultive/wp-content/uploads/2022/04/3-4.jpg"
+                  alt="Awesome "
+                />
+                <div className="card-body">
+                  <h4 className="card-title text-center"> Our Values </h4>
+                  <p className="card-text">
+                    Know how to pursue pleasure rationally encounter
+                    consequences that are extremely painful nor again is there
+                    anyone or pursues.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="container partners my-5" style={{ overflow: "hidden" }}>
+        <div className="row">
+          <h2 className="mb-5 fw-bold">Our Partners</h2>
+          <div className="swiper-container app-screen">
+            <div className="swiper-wrapper">
+              <div className="swiper-slide">
+                <div className="slider-image">
+                  <img
+                    src="http://wp3.commonsupport.com/newwp/statistics/wp-content/uploads/2016/12/1-4.jpg"
+                    alt="...."
+                  />
+                </div>
+              </div>
+              <div className="swiper-slide">
+                <div className="slider-image">
+                  <img
+                    src="http://wp3.commonsupport.com/newwp/statistics/wp-content/uploads/2016/12/2-4.jpg"
+                    alt="Awesome Logo"
+                  />
+                </div>
+              </div>
+              <div className="swiper-slide">
+                <div className="slider-image">
+                  <img
+                    src="http://wp3.commonsupport.com/newwp/statistics/wp-content/uploads/2016/12/3-3.jpg"
+                    alt="Awesome Logo"
+                  />
+                </div>
+              </div>
+              <div className="swiper-slide">
+                <div className="slider-image">
+                  <img
+                    src="http://wp3.commonsupport.com/newwp/statistics/wp-content/uploads/2016/12/4-1.jpg"
+                    alt="Awesome Logo"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+
+      <section className="promo-section py-md-5">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-7 col-md-8 col-12">

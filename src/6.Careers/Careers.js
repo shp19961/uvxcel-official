@@ -82,16 +82,20 @@ const Careers = () => {
       <div className="container">
         <ToastContainer autoClose={2000} className="toast-container" />
         <h1 className="career-title">Career Opportunities</h1>
-        <div className="row mt-md-5 mt-4">
-          <div className="col-lg-5 col-md-6 scroll px-md-5" id="ok">
+        <div className="row justify-content-center">
+          <div className="col-5">
             <input
               type="search"
               onChange={(e) => {
                 setJobSearch(e.target.value);
               }}
-              className="form-control search-job mt-1 mb-4"
+              className="form-control search-job mt-1"
               placeholder="Search job"
             />
+          </div>
+        </div>
+        <div className="row mt-md-5 mt-4">
+          <div className="col-lg-5 col-md-6 scroll px-md-5">
             {jobs
               .filter((job) => {
                 if (jobSearch === "") {
