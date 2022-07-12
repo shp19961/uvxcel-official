@@ -83,7 +83,7 @@ const Careers = () => {
         <ToastContainer autoClose={2000} className="toast-container" />
         <h1 className="career-title">Career Opportunities</h1>
         <div className="row mt-md-5 mt-4">
-          <div className="col-lg-5 col-md-6 scroll px-md-5">
+          <div className="col-lg-5 col-md-6 scroll px-md-5" id="ok">
             <input
               type="search"
               onChange={(e) => {

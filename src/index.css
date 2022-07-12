@@ -38,6 +38,10 @@
   box-shadow: 0 0 4px 0;
 }
 
+.navbar-collapse {
+  transition: 0.8s ease-in-out !important;
+}
+
 .navbar-brand {
   width: 144px !important;
   height: 61px !important;
@@ -96,7 +100,7 @@
   height: 480px;
   text-align: left;
   padding-top: 60px;
-  background: url('./images/bg.webp') no-repeat center center;
+  background: url('./images/bg.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -274,7 +278,7 @@
 
 .scroll {
   overflow-y: scroll;
-  height: 63vh;
+  height: 67vh;
 }
 
 .job-card {
@@ -301,7 +305,7 @@
 
 .job-description-card .card-body {
   overflow-y: scroll;
-  height: 40vh;
+  height: 44vh;
   margin-top: 10.5rem !important;
 }
 
@@ -439,6 +443,13 @@ footer p .icons:hover {
   color: orange !important;
 }
 
+footer hr {
+  width: 24px;
+  color: yellow;
+  background: white;
+  height: 2px;
+  margin: 0 0 5px 0;
+}
 
 
 /* Media Queries */
@@ -517,6 +528,11 @@ footer p .icons:hover {
   .carousel-inner img {
     height: 225px !important;
   }
+
+  .indicators {
+    margin: 0.5rem 5px !important;
+  }
+
 
   /* About */
   .about-text {
