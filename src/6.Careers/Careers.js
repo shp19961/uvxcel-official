@@ -82,20 +82,16 @@ const Careers = () => {
       <div className="container">
         <ToastContainer autoClose={2000} className="toast-container" />
         <h1 className="career-title">Career Opportunities</h1>
-        <div className="row justify-content-center">
-          <div className="col-4">
+        <div className="row mt-md-5 mt-4">
+          <div className="col-lg-5 col-md-6 scroll px-md-5">
             <input
               type="search"
               onChange={(e) => {
                 setJobSearch(e.target.value);
               }}
-              className="form-control search-job"
+              className="form-control search-job mt-1 mb-4"
               placeholder="Search job"
             />
-          </div>
-        </div>
-        <div className="row mt-md-5 mt-4">
-          <div className="col-lg-5 col-md-6 scroll px-md-5">
             {jobs
               .filter((job) => {
                 if (jobSearch === "") {
@@ -114,7 +110,7 @@ const Careers = () => {
                   className="card job-card shadow-sm mb-4"
                   key={job._id}
                 >
-                  <div className="card-body">
+                  <div className="card-body" id="ok">
                     <h5 className="card-title">{job.designation}</h5>
                     <span>
                       <BsFillBriefcaseFill size={15} />
@@ -140,39 +136,6 @@ const Careers = () => {
                   </div>
                 </div>
               ))}
-
-            {/* {jobs.map((job) => (
-              <div
-                onClick={(e) => loadCurrentJob(job._id, e)}
-                className="card job-card shadow-sm mb-4"
-                key={job._id}
-              >
-                <div className="card-body">
-                  <h5 className="card-title">{job.designation}</h5>
-                  <span>
-                    <BsFillBriefcaseFill size={15} />
-                    <span className="mx-2">{job.experience} Yrs</span>
-                  </span>
-
-                  <span className="mx-2">
-                    <BsCashStack />
-                    <span className="mx-1">
-                      {job.salary ? job.salary : "Not Mentioned"}
-                    </span>
-                  </span>
-
-                  <span className="mx-2">
-                    <MdLocationOn />
-                    <span className="mx-1">{job.location}</span>
-                  </span>
-                  <p className="card-text mt-2 skills">
-                    {job.skills
-                      ? job.skills.split(",").join(" . ")
-                      : "Not Available"}
-                  </p>
-                </div>
-              </div>
-            ))} */}
           </div>
           <hr className="d-md-none d-block my-4" />
           <div className="col-lg-7 col-md-6">
@@ -199,7 +162,7 @@ const Careers = () => {
                       </Link>
                     </div>
                     <div className="card-body">
-                      <h5 className="fw-bold">Full Job Description</h5>
+                      <span className="fw-bold h5">Full Job Description</span>
                       <p className="card-text">
                         <br />
                         <span>{currentJob.desc}</span>

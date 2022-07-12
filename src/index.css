@@ -266,6 +266,12 @@
   font-weight: bold;
 }
 
+.search-job {
+  box-shadow: none !important;
+  border: 2px solid skyblue !important;
+  font-weight: bold !important;
+}
+
 .scroll {
   overflow-y: scroll;
   height: 63vh;
