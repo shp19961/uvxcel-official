@@ -11,9 +11,6 @@ const AboutUs = () => {
   useEffect(() => {
     new Swiper(".swiper-container.app-screen", {
       effect: "coverflow",
-      fadeEffect: {
-        crossFade: true,
-      },
       loop: true,
       autoplaySpeed: 2000,
       centeredSlides: true,
@@ -156,7 +153,10 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <div className="container partners my-5" style={{ overflow: "hidden" }}>
+      <section
+        className="container partners py-5"
+        style={{ overflow: "hidden" }}
+      >
         <div className="row">
           <h2 className="mb-5 fw-bold">Our Partners</h2>
           <div className="swiper-container app-screen">
@@ -194,10 +194,10 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
-            <div className="swiper-pagination"></div>
+            <div className="swiper-pagination mt-5"></div>
           </div>
         </div>
-      </div>
+      </section>
 
       <section className="promo-section py-md-5">
         <div className="container">
