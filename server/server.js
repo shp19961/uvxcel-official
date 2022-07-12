@@ -7,10 +7,12 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect(
-  `mongodb+srv://shp-1996:shp-1996@cluster5.w3ux6.mongodb.net/UserInfo?retryWrites=true&w=majority`
+  `mongodb+srv://shp-1996:shp-1996@cluster5.w3ux6.mongodb.net/uvXcel?retryWrites=true&w=majority`
 );
 
 app.use("/", require("./routes/jobRoutes"));
+app.use("/", require("./routes/subscriberRoutes"));
+app.use("/", require("./routes/userRoutes"));
 
 const PORT = 5004;
 

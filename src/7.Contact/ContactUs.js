@@ -101,7 +101,7 @@ const ContactUs = () => {
     ) {
       toast.error("Please enter correct details in the form");
     } else {
-      await axios.post("http://localhost:5001/save_data", formData);
+      await axios.post("http://localhost:5004/save_data", formData);
       toast.success("DATA SENT SUCCESSFULLY");
       const inputs = document.querySelectorAll(
         "#name, #email, #mobile, #sub, #help"

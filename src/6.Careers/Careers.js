@@ -50,7 +50,7 @@ const Careers = () => {
     if (emailErr === true) {
       toast.error("Please enter valid email");
     } else {
-      await axios.post("http://localhost:5001/subscriber/save_email", formData);
+      await axios.post("http://localhost:5004/save_email", formData);
       toast.success("Subscribed Successfully");
       const input = document.querySelector("#email");
       input.value = "";
