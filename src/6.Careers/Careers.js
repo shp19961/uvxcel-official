@@ -14,6 +14,7 @@ const Careers = () => {
   const [jobSearch, setJobSearch] = useState("");
   const [jobs, setJobs] = useState([]);
   const [currentJob, setCurrentJob] = useState([]);
+  // eslint-disable-next-line
   const [searchFocus, setSearchFocus] = useState(false);
   const searchInput = useRef();
   const searchPTag = useRef();
@@ -23,6 +24,7 @@ const Careers = () => {
   const searchArray = ["reactjs developer", "python developer", "search job"];
 
   let textArrayIndex = 0;
+  // eslint-disable-next-line
   var myTimeout1, myTimeout2;
 
   const downToUp = () => {
@@ -52,7 +54,7 @@ const Careers = () => {
 
   useEffect(() => {
     downToUp();
-  }, []);
+  });
 
   useEffect(() => {
     if (searchValue) {
@@ -130,17 +132,6 @@ const Careers = () => {
         <ToastContainer autoClose={2000} className="toast-container" />
         <h1 className="career-title">Career Opportunities</h1>
         <div className="row justify-content-center">
-          {/* <div className="col-5">
-            <input
-              type="search"
-              onChange={(e) => {
-                setJobSearch(e.target.value);
-              }}
-              className="form-control search-job mt-1"
-              placeholder="Search job"
-            />
-          </div> */}
-
           <div className="col-md-6 col-12">
             <div className="search-container" ref={searchContainerRef}>
               <p ref={searchPTag}></p>
@@ -160,7 +151,7 @@ const Careers = () => {
             </div>
           </div>
         </div>
-        <div className="row mt-md-5 mt-4">
+        <div className="row mt-4">
           <div className="col-lg-5 col-md-6 scroll px-md-5">
             {jobs
               .filter((job) => {
