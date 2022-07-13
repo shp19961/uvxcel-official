@@ -155,14 +155,14 @@
 .about-text {
   text-align: justify;
   font-size: 16px;
-  line-height: 2.2rem;
+  line-height: 2rem;
 }
 
 
 /* Vision mission */
-/* #vision-mission {
-  overflow-x: hidden !important;
-} */
+#vision-mission {
+  margin-top: 5rem !important;
+}
 
 .bottom-content .card {
   height: 370px;

@@ -24,9 +24,9 @@ const AboutUs = () => {
       <section>
         <div className="container mb-5">
           <div className="row about-image mt-2">
-            <h1 className="about-title mb-4 text-center">About Us</h1>
+            <h1 className="about-title mb-5 text-center">About Us</h1>
             <div className="col-12">
-              <h2 className="mb-4 fw-bold">Company Overview</h2>
+              <h2 className="mb-md-3 mb-2 fw-bold">Company Overview</h2>
               <div className="about-text">
                 <p>
                   <strong>uvXcel</strong> is contradictorily a startup that has
@@ -205,11 +205,7 @@ const AboutUs = () => {
           </div>
 
           <div className="row mobile-px-20 mt-2">
-            <div
-              className="col-md-6 col-lg-4"
-              data-aos="fade-left"
-              data-aos-duration="800"
-            >
+            <div className="col-md-6 col-lg-4">
               <div className="single-promo-hover single-promo-1 text-center">
                 <div className="circle-icon">
                   <span>
@@ -226,11 +222,7 @@ const AboutUs = () => {
               </div>
             </div>
 
-            <div
-              className="col-md-6 col-lg-4"
-              data-aos="fade-left"
-              data-aos-duration="1400"
-            >
+            <div className="col-md-6 col-lg-4">
               <div className="single-promo-hover single-promo-1 text-center">
                 <div className="circle-icon">
                   <span>
@@ -247,11 +239,7 @@ const AboutUs = () => {
               </div>
             </div>
 
-            <div
-              className="col-md-6 col-lg-4"
-              data-aos="fade-left"
-              data-aos-duration="1800"
-            >
+            <div className="col-md-6 col-lg-4">
               <div className="single-promo-hover single-promo-1 text-center">
                 <div className="circle-icon">
                   <span>
