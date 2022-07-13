@@ -36,7 +36,7 @@ const Technologies = () => {
       transition={{ duration: 0.2 }}
       className="technologies"
     >
-      <div className="container" style={{ overflow: "hidden" }}>
+      <div className="container">
         <h1 className="text-center py-4 tech-ttl">
           Technologies we provide assistance in
         </h1>

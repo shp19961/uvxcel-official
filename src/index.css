@@ -29,6 +29,7 @@
 .contact {
   padding-top: 100px;
   min-height: 100vh !important;
+  overflow-x: hidden !important;
 }
 
 
@@ -159,9 +160,9 @@
 
 
 /* Vision mission */
-#vision-mission {
+/* #vision-mission {
   overflow-x: hidden !important;
-}
+} */
 
 .bottom-content .card {
   height: 370px;
@@ -197,9 +198,9 @@
 
 
 /* Promo */
-.promo-section {
+/* .promo-section {
   overflow-x: hidden;
-}
+} */
 
 .single-promo-1 h5 {
   color: deeppink;
@@ -585,6 +586,10 @@ footer hr {
   /* About */
   .about-text {
     font-size: smaller;
+  }
+
+  .promo-section {
+    margin-top: 5rem;
   }
 
   /* Technologies */
