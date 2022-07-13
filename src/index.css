@@ -181,28 +181,19 @@
 }
 
 /* Partners */
-.partners .swiper-slide {
-  display: flex;
-  justify-content: center;
-  width: 250px !important;
+.owl-carousel .item {
+  margin: 3px;
+}
+
+.owl-carousel .item img {
+  display: block;
+  width: 100%;
   height: auto;
 }
 
-.partners .swiper-slide .slider-image img {
-  background-position: center;
-  height: 180px !important;
+.owl-carousel {
+  margin-bottom: 15px;
 }
-
-
-.partners .swiper-pagination-bullet {
-  width: 0.7rem !important;
-  height: 0.7rem !important;
-}
-
-.partners .app-screen {
-  padding-bottom: 5.4rem;
-}
-
 
 
 /* Promo */

@@ -4,13 +4,31 @@ const allJobs = require("../models/jobModel");
 
 // Route-1 add job details
 router.post("/add-job", async (req, res) => {
-  const { designation, experience, salary, location, skills } = req.body;
+  const {
+    designation,
+    experience,
+    skills,
+    salary,
+    desc,
+    location,
+    status,
+    type,
+    shifts,
+    positions,
+    eligibility,
+  } = req.body;
   const newJob = await new allJobs({
     designation,
     experience,
-    salary,
-    location,
     skills,
+    salary,
+    desc,
+    location,
+    status,
+    type,
+    shifts,
+    positions,
+    eligibility,
   });
   newJob.save();
   res.send({ newJob });

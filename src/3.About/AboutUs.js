@@ -4,26 +4,15 @@ import { AiFillDatabase } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
 import { RiFileExcel2Fill } from "react-icons/ri";
 import Aos from "aos";
-import Swiper from "swiper/bundle";
-import "swiper/css/bundle";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 
 const AboutUs = () => {
   useEffect(() => {
-    new Swiper(".swiper-container.app-screen", {
-      effect: "coverflow",
-      loop: true,
-      autoplaySpeed: 2000,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      autoplay: { delay: 2000, disableOnInteraction: true },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      paginationClickable: true,
-    });
-  }, []);
-  Aos.init();
+    Aos.init();
+  });
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -153,52 +142,53 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section
-        className="container partners py-5"
-        style={{ overflow: "hidden" }}
-      >
-        <div className="row">
-          <h2 className="mb-5 fw-bold">Our Partners</h2>
-          <div className="swiper-container app-screen">
-            <div className="swiper-wrapper">
-              <div className="swiper-slide">
-                <div className="slider-image">
-                  <img
-                    src="http://wp3.commonsupport.com/newwp/statistics/wp-content/uploads/2016/12/1-4.jpg"
-                    alt="...."
-                  />
-                </div>
-              </div>
-              <div className="swiper-slide">
-                <div className="slider-image">
-                  <img
-                    src="http://wp3.commonsupport.com/newwp/statistics/wp-content/uploads/2016/12/2-4.jpg"
-                    alt="Awesome Logo"
-                  />
-                </div>
-              </div>
-              <div className="swiper-slide">
-                <div className="slider-image">
-                  <img
-                    src="http://wp3.commonsupport.com/newwp/statistics/wp-content/uploads/2016/12/3-3.jpg"
-                    alt="Awesome Logo"
-                  />
-                </div>
-              </div>
-              <div className="swiper-slide">
-                <div className="slider-image">
-                  <img
-                    src="http://wp3.commonsupport.com/newwp/statistics/wp-content/uploads/2016/12/4-1.jpg"
-                    alt="Awesome Logo"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="swiper-pagination mt-5"></div>
-          </div>
-        </div>
-      </section>
+      <div className="container" data-aos="fade-up">
+        <h2 className="fw-bold mb-4">Our Partners</h2>
 
+        <OwlCarousel
+          autoplayTimeout={3000}
+          dotsEach
+          fluidSpeed
+          autoplaySpeed={2000}
+          className="owl-theme"
+          items={3}
+          loop
+          margin={4}
+          autoplay={true}
+          nav
+        >
+          <div className="item border">
+            <img
+              src="http://wp3.commonsupport.com/newwp/statistics/wp-content/uploads/2016/12/1-4.jpg"
+              alt="...."
+            />
+          </div>
+          <div className="item border">
+            <img
+              src="http://wp3.commonsupport.com/newwp/statistics/wp-content/uploads/2016/12/2-4.jpg"
+              alt="...."
+            />
+          </div>
+          <div className="item border">
+            <img
+              src="http://wp3.commonsupport.com/newwp/statistics/wp-content/uploads/2016/12/3-3.jpg"
+              alt="...."
+            />
+          </div>
+          <div className="item border">
+            <img
+              src="http://wp3.commonsupport.com/newwp/statistics/wp-content/uploads/2016/12/4-1.jpg"
+              alt="...."
+            />
+          </div>
+          <div className="item border">
+            <img
+              src="http://wp3.commonsupport.com/newwp/statistics/wp-content/uploads/2016/12/5-1.jpg"
+              alt="...."
+            />
+          </div>
+        </OwlCarousel>
+      </div>
       <section className="promo-section py-md-5">
         <div className="container">
           <div className="row justify-content-center">

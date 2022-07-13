@@ -106,6 +106,8 @@ const Careers = () => {
                     .includes(jobSearch.toLowerCase())
                 ) {
                   return job;
+                } else {
+                  return null;
                 }
               })
               .map((job) => (
