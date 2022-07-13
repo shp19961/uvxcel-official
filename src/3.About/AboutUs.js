@@ -23,10 +23,10 @@ const AboutUs = () => {
     >
       <section>
         <div className="container mb-5">
-          <div className="row about-image mt-2">
+          <div className="row about-image">
             <h1 className="about-title mb-4 text-center">About Us</h1>
             <div className="col-12">
-              <h2 className="mb-md-3 mb-2 fw-bold">Company Overview</h2>
+              <h2 className="mb-2 mb-lg-3 fw-bold">Company Overview</h2>
               <div className="about-text">
                 <p>
                   <strong>uvXcel</strong> is contradictorily a startup that has
@@ -189,7 +189,8 @@ const AboutUs = () => {
           </div>
         </OwlCarousel>
       </div>
-      <section className="promo-section py-md-5">
+
+      <section className="promo-section pb-md-5">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-7 col-md-8 col-12">
