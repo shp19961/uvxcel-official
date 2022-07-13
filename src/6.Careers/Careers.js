@@ -1,19 +1,66 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { motion } from "framer-motion";
 import { BsFillBriefcaseFill, BsCashStack } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
 import { FaUserPlus, FaClock } from "react-icons/fa";
+import { FiSearch } from "react-icons/fi";
 
 const Careers = () => {
   const [email, setEmail] = useState("");
   const [emailErr, setEmailErr] = useState(false);
   const [jobSearch, setJobSearch] = useState("");
-
   const [jobs, setJobs] = useState([]);
   const [currentJob, setCurrentJob] = useState([]);
+  const [searchFocus, setSearchFocus] = useState(false);
+  const searchInput = useRef();
+  const searchPTag = useRef();
+  const searchContainerRef = useRef();
+  const [searchValue, setSearchValue] = useState("");
+
+  const searchArray = ["reactjs developer", "python developer", "search job"];
+
+  let textArrayIndex = 0;
+  var myTimeout1, myTimeout2;
+
+  const downToUp = () => {
+    if (searchArray[textArrayIndex]) {
+      searchPTag.current.innerHTML = searchArray[textArrayIndex];
+
+      searchPTag.current.classList.remove("removePlace");
+      searchPTag.current.classList.add("setPlace");
+      if (!searchFocus) {
+        myTimeout1 = setTimeout(moveUp, 2000);
+      }
+    }
+  };
+
+  const moveUp = () => {
+    searchPTag.current.classList.remove("setPlace");
+    searchPTag.current.classList.add("removePlace");
+    if (textArrayIndex === searchArray.length - 1) {
+      textArrayIndex = 0;
+    } else {
+      textArrayIndex++;
+    }
+    if (!searchFocus) {
+      myTimeout2 = setTimeout(downToUp, 1000);
+    }
+  };
+
+  useEffect(() => {
+    downToUp();
+  }, []);
+
+  useEffect(() => {
+    if (searchValue) {
+      searchPTag.current.classList.add("stopText");
+    } else if (searchPTag.current.classList.contains("stopText")) {
+      searchPTag.current.classList.remove("stopText");
+    }
+  }, [searchValue]);
 
   useEffect(() => {
     const getAllJobs = async () => {
@@ -83,7 +130,7 @@ const Careers = () => {
         <ToastContainer autoClose={2000} className="toast-container" />
         <h1 className="career-title">Career Opportunities</h1>
         <div className="row justify-content-center">
-          <div className="col-5">
+          {/* <div className="col-5">
             <input
               type="search"
               onChange={(e) => {
@@ -92,6 +139,25 @@ const Careers = () => {
               className="form-control search-job mt-1"
               placeholder="Search job"
             />
+          </div> */}
+
+          <div className="col-md-6 col-12">
+            <div className="search-container" ref={searchContainerRef}>
+              <p ref={searchPTag}></p>
+              <input
+                className="search-input"
+                type="text"
+                value={searchValue}
+                onChange={(e) => {
+                  setJobSearch(e.target.value);
+                  setSearchValue(e.target.value);
+                }}
+                ref={searchInput}
+              />
+              <button>
+                <FiSearch />
+              </button>
+            </div>
           </div>
         </div>
         <div className="row mt-md-5 mt-4">
