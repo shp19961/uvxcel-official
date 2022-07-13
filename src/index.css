@@ -198,9 +198,9 @@
 
 
 /* Promo */
-/* .promo-section {
-  overflow-x: hidden;
-} */
+.promo-section {
+  margin-top: 5rem;
+}
 
 .single-promo-1 h5 {
   color: deeppink;
@@ -588,9 +588,6 @@ footer hr {
     font-size: smaller;
   }
 
-  .promo-section {
-    margin-top: 5rem;
-  }
 
   /* Technologies */
   .technologies {

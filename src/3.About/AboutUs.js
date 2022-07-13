@@ -24,7 +24,7 @@ const AboutUs = () => {
       <section>
         <div className="container mb-5">
           <div className="row about-image mt-2">
-            <h1 className="about-title mb-5 text-center">About Us</h1>
+            <h1 className="about-title mb-4 text-center">About Us</h1>
             <div className="col-12">
               <h2 className="mb-md-3 mb-2 fw-bold">Company Overview</h2>
               <div className="about-text">
@@ -142,7 +142,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <div className="container" data-aos="fade-up">
+      <div className="container" data-aos="fade-up" data-aos-duration="1500">
         <h2 className="fw-bold mb-4">Our Partners</h2>
 
         <OwlCarousel
