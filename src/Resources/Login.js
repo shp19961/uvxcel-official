@@ -17,7 +17,7 @@ const Login = () => {
       nav("/resources");
     } catch (err) {
       setError(
-        "Invalid credentials, please contact your organisation or try again"
+        "Invalid credentials, try again or please contact your organisation"
       );
     }
   };
