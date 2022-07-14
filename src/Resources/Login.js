@@ -33,28 +33,28 @@ const Login = () => {
             </div>
           )}
           <form onSubmit={handleSubmit}>
-            <div class="mb-3">
+            <div className="mb-3">
               <input
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
                 type="email"
-                class="form-control"
+                className="form-control"
                 placeholder="Email"
                 aria-describedby="emailHelp"
               />
             </div>
-            <div class="mb-3">
+            <div className="mb-3">
               <input
                 onChange={(e) => {
                   setPassword(e.target.value);
                 }}
                 type="password"
-                class="form-control"
+                className="form-control"
                 placeholder="Password"
               />
             </div>
-            <button type="submit" class="btn btn-primary mb-3">
+            <button type="submit" className="btn btn-primary mb-3">
               Log in
             </button>
           </form>
