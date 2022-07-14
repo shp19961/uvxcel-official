@@ -26,12 +26,14 @@
 .services,
 .technologies,
 .careers,
-.contact {
+.contact,
+.login,
+.signup,
+.resources {
   padding-top: 100px;
   min-height: 100vh !important;
   overflow-x: hidden !important;
 }
-
 
 /* Styles for Navbar.js */
 .navbar {
