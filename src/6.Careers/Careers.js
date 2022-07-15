@@ -247,7 +247,7 @@ const Careers = () => {
                         Eligibility:
                         <ul>
                           <li>
-                            Qualification:
+                            Qualification:{" "}
                             {currentJob.eligibility === undefined
                               ? ""
                               : currentJob.eligibility.qualification}
