@@ -69,7 +69,8 @@ const Careers = () => {
     } else if (searchPTag.current.classList.contains("stopText")) {
       searchPTag.current.classList.remove("stopText");
     }
-  });
+    // eslint-disable-next-line 
+  },[searchValue]);
 
   const [formData, setFormData] = useState([]);
 
