@@ -590,6 +590,13 @@ footer hr {
   margin: 0 0 5px 0;
 }
 
+/* Resources */
+.resources .card:hover {
+  cursor: pointer;
+  background: orange;
+  color: white;
+}
+
 
 /* Media Queries */
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/UserAuthContext";
+import { FaDownload } from "react-icons/fa";
 
 const Resource = () => {
   const { logOut, user } = useUserAuth();
@@ -32,20 +33,37 @@ const Resource = () => {
         </h4>
       </div>
       <div className="row justify-content-center py-5">
-        <div className="col-md-3">
-          <div className="card mb-3 shadow p-3">download resource</div>
+        <div className="col-md-4 col-lg-3 col-6">
+          <div className="card mb-3 shadow">
+            <div className="card-body">
+              <FaDownload className="mx-2" />
+              resource 1
+            </div>
+          </div>
         </div>
-        <div className="col-md-3">
-          <div className="card mb-3 shadow p-3">download resource</div>
+        <div className="col-md-4 col-lg-3 col-6">
+          <div className="card mb-3 shadow">
+            <div className="card-body">
+              <FaDownload className="mx-2" />
+              resource 2
+            </div>
+          </div>
         </div>
-        <div className="col-md-3">
-          <div className="card mb-3 shadow p-3">download resource</div>
+        <div className="col-md-4 col-lg-3 col-6">
+          <div className="card mb-3 shadow">
+            <div className="card-body">
+              <FaDownload className="mx-2" />
+              resource 3
+            </div>
+          </div>
         </div>
-        <div className="col-md-3">
-          <div className="card mb-3 shadow p-3">download resource</div>
-        </div>
-        <div className="col-md-3">
-          <div className="card mb-3 shadow p-3">download resource</div>
+        <div className="col-md-4 col-lg-3 col-6">
+          <div className="card mb-3 shadow">
+            <div className="card-body">
+              <FaDownload className="mx-2" />
+              resource 4
+            </div>
+          </div>
         </div>
       </div>
     </div>
