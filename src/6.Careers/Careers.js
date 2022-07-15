@@ -53,18 +53,6 @@ const Careers = () => {
   };
 
   useEffect(() => {
-    downToUp();
-  });
-
-  useEffect(() => {
-    if (searchValue) {
-      searchPTag.current.classList.add("stopText");
-    } else if (searchPTag.current.classList.contains("stopText")) {
-      searchPTag.current.classList.remove("stopText");
-    }
-  }, [searchValue]);
-
-  useEffect(() => {
     const getAllJobs = async () => {
       const getJobs = await axios.get(`http://localhost:5004/get-jobs`);
       setJobs(getJobs.data);
@@ -72,10 +60,16 @@ const Careers = () => {
       setCurrentJob(getJobs.data[0]);
       setTimeout(() => {
         document.querySelectorAll(".job-card")[0].classList.add("active-job");
-      });
+      },100);
     };
     getAllJobs();
-  }, []);
+    downToUp();
+    if (searchValue) {
+      searchPTag.current.classList.add("stopText");
+    } else if (searchPTag.current.classList.contains("stopText")) {
+      searchPTag.current.classList.remove("stopText");
+    }
+  });
 
   const [formData, setFormData] = useState([]);
 
@@ -151,7 +145,7 @@ const Careers = () => {
           </div>
         </div>
         <div className="row mt-4">
-          <div className="col-lg-5 col-md-6 scroll px-md-5">
+          <div className="col-lg-5 col-md-6 scroll px-lg-5 px-md-4">
             {jobs
               .filter((job) => {
                 if (jobSearch === "") {
@@ -176,7 +170,7 @@ const Careers = () => {
                     <h5 className="card-title">{job.designation}</h5>
                     <span>
                       <BsFillBriefcaseFill size={15} />
-                      <span className="mx-2">{job.experience} Yrs</span>
+                      <span className="mx-1">{job.experience} Yrs</span>
                     </span>
 
                     <span className="mx-2">
@@ -186,7 +180,7 @@ const Careers = () => {
                       </span>
                     </span>
 
-                    <span className="mx-2">
+                    <span>
                       <MdLocationOn />
                       <span className="mx-1">{job.location}</span>
                     </span>
