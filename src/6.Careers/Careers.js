@@ -58,9 +58,6 @@ const Careers = () => {
       setJobs(getJobs.data);
       // load first job for showing active on refreshing the page
       setCurrentJob(getJobs.data[0]);
-      setTimeout(() => {
-        document.querySelectorAll(".job-card")[0].classList.add("active-job");
-      },100);
     };
     getAllJobs();
     downToUp();
@@ -69,8 +66,8 @@ const Careers = () => {
     } else if (searchPTag.current.classList.contains("stopText")) {
       searchPTag.current.classList.remove("stopText");
     }
-    // eslint-disable-next-line 
-  },[searchValue]);
+    // eslint-disable-next-line
+  }, [searchValue]);
 
   const [formData, setFormData] = useState([]);
 
@@ -167,7 +164,7 @@ const Careers = () => {
                   className="card job-card shadow-sm mb-4"
                   key={job._id}
                 >
-                  <div className="card-body" id="ok">
+                  <div className="card-body">
                     <h5 className="card-title">{job.designation}</h5>
                     <span>
                       <BsFillBriefcaseFill size={15} />
