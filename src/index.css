@@ -605,6 +605,11 @@ footer hr {
 
 @media (max-width:991px) {
 
+  .toast-container {
+    padding-right: 30% !important;
+    padding-left: 30% !important;
+  }
+
   .services,
   .technologies,
   .careers,
@@ -658,6 +663,11 @@ footer hr {
 }
 
 @media (max-width:767px) {
+
+  .toast-container {
+    padding-right: 11% !important;
+    padding-left: 11% !important;
+  }
 
   /* Navbar */
   .nav-item>.active,

@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { BsFillEnvelopeFill } from "react-icons/bs";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import { codes } from "./countryCodes";
 import { motion } from "framer-motion";
 import { GrLocation } from "react-icons/gr";
@@ -121,7 +121,6 @@ const ContactUs = () => {
       transition={{ duration: 0.4 }}
       className="contact"
     >
-      <ToastContainer autoClose={2000} className="toast-container" />
       <div className="container">
         <div className="text-center">
           <h5 className="text-uppercase" style={{ color: "deeppink" }}>

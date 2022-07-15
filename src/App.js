@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import Navbar from "./1.Navbar/Navbar";
 import AnimatedPage from "./11.Framer/AnimatedPage";
 import ScrollButton from "./8.Scroll-To-Top/ScrollButton";
@@ -25,6 +26,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+      <ToastContainer autoClose={2000} className="toast-container" />
         <Navbar />
         <div
           className={`progress fixed-top  ${scrollTop === 0 ? "d-none" : ""}`}

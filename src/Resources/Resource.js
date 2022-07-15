@@ -18,7 +18,7 @@ const Resource = () => {
   return (
     <div className="container resources">
       <div className="row justify-content-end">
-        <div className="col-2 d-flex justify-content-end">
+        <div className="col-md-2 col-4  d-flex justify-content-end">
           <button className="btn btn-primary mb-3" onClick={handleLogout}>
             Log out
           </button>

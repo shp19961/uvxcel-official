@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUserAuth } from "../context/UserAuthContext";
@@ -14,6 +15,7 @@ const Login = () => {
     setError("");
     try {
       await logIn(email, password);
+      toast.success("Logged in successfully !");
       nav("/resources");
     } catch (err) {
       setError(
@@ -26,7 +28,7 @@ const Login = () => {
     <div className="container login mt-4">
       <h1 className="text-center py-5">Login</h1>
       <div className="row justify-content-center">
-        <div className="col-6">
+        <div className="col-md-6 col-10">
           {error && (
             <div className="alert alert-danger" role="alert">
               {error}

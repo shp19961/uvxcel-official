@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { BsFillBriefcaseFill, BsCashStack } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
@@ -129,7 +129,6 @@ const Careers = () => {
       className="careers"
     >
       <div className="container">
-        <ToastContainer autoClose={2000} className="toast-container" />
         <h1 className="career-title">Career Opportunities</h1>
         <div className="row justify-content-center">
           <div className="col-md-6 col-12">
@@ -241,6 +240,24 @@ const Careers = () => {
                         <ul>
                           <li>Cell phone reimbursement</li>
                           <li>Internet reimbursement</li>
+                        </ul>
+                      </span>
+
+                      <span className="card-text">
+                        Eligibility:
+                        <ul>
+                          <li>
+                            Qualification:
+                            {currentJob.eligibility === undefined
+                              ? ""
+                              : currentJob.eligibility.qualification}
+                          </li>
+                          <li>
+                            Nationality:{" "}
+                            {currentJob.eligibility === undefined
+                              ? ""
+                              : currentJob.eligibility.nationality}
+                          </li>
                         </ul>
                       </span>
                       <hr />
