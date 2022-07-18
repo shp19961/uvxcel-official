@@ -314,13 +314,6 @@
   font-weight: bold;
 }
 
-/* .search-job {
-  border-radius: 15px !important;
-  box-shadow: none !important;
-  border: 2px solid skyblue !important;
-  font-weight: bold !important;
-} */
-
 .search-container {
   position: relative;
   width: 285px;
@@ -428,6 +421,10 @@
   cursor: pointer;
 }
 
+.job-card .card-body {
+  color: black !important;
+}
+
 .job-card .card-title,
 .job-description .card-title {
   color: orange;
@@ -526,8 +523,11 @@ span {
 
 .active-job {
   background: black !important;
-  color: white;
   transition: .4s ease-in-out;
+}
+
+.active-job .card-body {
+  color: white !important;
 }
 
 
@@ -719,7 +719,7 @@ footer hr {
   /* Careers */
 
   .scroll {
-    height: 41vh;
+    height: 60vh;
   }
 
   .job-description-card .card-body {

@@ -159,7 +159,9 @@ const Careers = () => {
                 }
               })
               .map((job) => (
-                <div
+                <a
+                  style={{ textDecoration: "none" }}
+                  href="#job"
                   onClick={(e) => loadCurrentJob(job._id, e)}
                   className="card job-card shadow-sm mb-4"
                   key={job._id}
@@ -188,10 +190,14 @@ const Careers = () => {
                         : "Not Available"}
                     </p>
                   </div>
-                </div>
+                </a>
               ))}
           </div>
-          <hr className="d-md-none d-block my-4" />
+          <hr
+            className="d-md-none d-block"
+            style={{ margin: "6rem 0rem" }}
+            id="job"
+          />
           <div className="col-lg-7 col-md-6">
             <div className="container-fluid job-description">
               <div className="row justify-content-center">
