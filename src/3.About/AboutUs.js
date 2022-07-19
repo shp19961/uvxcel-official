@@ -5,8 +5,6 @@ import { FaHandshake } from "react-icons/fa";
 import { RiFileExcel2Fill } from "react-icons/ri";
 import Aos from "aos";
 import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
 
 const AboutUs = () => {
   useEffect(() => {

@@ -1,32 +1,11 @@
 import React, { useEffect } from "react";
 import { images } from "./Imported-Images";
-import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import { motion } from "framer-motion";
+import OwlCarousel from "react-owl-carousel";
 
 const Technologies = () => {
-  useEffect(() => {
-    new Swiper(".swiper-container.app-screen", {
-      effect: "coverflow",
-      loop: true,
-      autoplaySpeed: 2000,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      autoplay: { delay: 2000, disableOnInteraction: true },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      paginationClickable: true,
-      coverflow: {
-        rotate: 0,
-        stretch: 100,
-        depth: 150,
-        modifier: 1.5,
-        slideShadows: false,
-      },
-    });
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <motion.div
@@ -42,18 +21,24 @@ const Technologies = () => {
         </h1>
         <div className="row pt-5">
           <div className="col-12">
-            <div className="swiper-container app-screen">
-              <div className="swiper-wrapper">
-                {images.map((item) => (
-                  <div className="swiper-slide" key={item.img}>
-                    <div className="slider-image">
-                      <img src={item.img} alt={item.img} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="swiper-pagination"></div>
-            </div>
+            <OwlCarousel
+              autoplayTimeout={3000}
+              dotsEach
+              fluidSpeed
+              autoplaySpeed={2000}
+              className="owl-theme"
+              items={5}
+              loop
+              margin={4}
+              autoplay={true}
+              nav
+            >
+              {images.map((item) => (
+                <div className="item border" key={item.img}>
+                  <img src={item.img} alt="...." />
+                </div>
+              ))}
+            </OwlCarousel>
           </div>
         </div>
       </div>

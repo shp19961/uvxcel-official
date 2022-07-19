@@ -184,18 +184,19 @@
   filter: grayscale(100%) !important;
 }
 
+
 /* Partners */
-.owl-carousel .item {
+.about .owl-carousel .item {
   margin: 3px;
 }
 
-.owl-carousel .item img {
+.about .owl-carousel .item img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.owl-carousel {
+.about .owl-carousel {
   margin-bottom: 15px;
 }
 
@@ -280,28 +281,20 @@
 
 /* Styles for Technologies.js */
 
-.technologies .app-screen {
-  padding-bottom: 5.4rem;
+.technologies .owl-carousel .item {
+  border: none !important;
+  margin: 2rem;
 }
 
-.technologies .swiper-slide {
-  display: flex;
-  justify-content: center;
-  width: 250px !important;
-  height: auto;
-}
-
-.technologies .swiper-slide .slider-image img {
-  background-position: center;
-  height: 200px !important;
-  object-fit: contain;
+.technologies .owl-carousel .item img {
+  display: block;
   filter: drop-shadow(1px 1px 0px black);
+  height: 174px;
+  width: 164px;
 }
 
-
-.technologies .swiper-pagination-bullet {
-  width: 0.7rem !important;
-  height: 0.7rem !important;
+.technologies .owl-carousel {
+  margin-bottom: 15px;
 }
 
 
@@ -655,6 +648,13 @@ footer hr {
     height: 44%;
   }
 
+  /* Technologies */
+
+  .technologies .owl-carousel .item img {
+    height: 110px;
+    width: 100px;
+  }
+
   /* Careers */
   .scroll {
     height: 45vh;
@@ -708,13 +708,11 @@ footer hr {
     height: 100vh !important;
   }
 
-  .technologies .swiper-slide {
-    width: 170px !important;
+  .technologies .owl-carousel .item img {
+    height: 60px;
+    width: 55px;
   }
 
-  .technologies .swiper-slide .slider-image img {
-    height: 120px !important;
-  }
 
   /* Careers */
 
