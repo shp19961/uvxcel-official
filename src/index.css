@@ -250,16 +250,16 @@
 
 
 /* Styles for Services.js */
-.services .card {
-  height: 330px !important;
+/* .services .card {
+  height: 200px;
   transition: .2s ease-in-out;
   border-radius: 24px;
-}
+} */
 
-.services .card:hover {
+/* .services .card:hover {
   transform: scale(1.04);
   transition: .2s ease-in-out;
-}
+} */
 
 .services-ttl {
   color: rgb(0, 58, 139);
@@ -273,7 +273,6 @@
 
 .services img {
   object-fit: contain;
-  height: 45%;
 }
 
 
@@ -435,7 +434,7 @@
 .job-description-card .card-body {
   overflow-y: scroll;
   height: 41vh;
-  margin-top: 10.5rem !important;
+  margin-top: 11rem !important;
 }
 
 .job-description-card .card-body p,
@@ -643,10 +642,6 @@ footer hr {
     height: 350px;
   }
 
-  /* Services */
-  .services img {
-    height: 44%;
-  }
 
   /* Technologies */
 
