@@ -390,10 +390,20 @@
 
 
 
-.scroll {
+/* .scroll {
   overflow-y: scroll;
   height: 63vh;
+} */
+
+.page-link {
+  padding: 0.1rem 0.5rem !important;
 }
+
+.page-link:hover {
+  background: red !important;
+  color: white !important;
+}
+
 
 .job-card {
   transition: .4s ease-in-out;
@@ -487,7 +497,7 @@ span {
   border-color: red;
 }
 
-.scroll::-webkit-scrollbar {
+/* .scroll::-webkit-scrollbar {
   width: 6px;
 }
 
@@ -501,7 +511,7 @@ span {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-}
+} */
 
 .active-job {
   background: black !important;
@@ -641,9 +651,9 @@ footer hr {
   }
 
   /* Careers */
-  .scroll {
+  /* .scroll {
     height: 45vh;
-  }
+  } */
 
   .job-description-card .card-body {
     height: 31vh;
@@ -700,10 +710,10 @@ footer hr {
 
 
   /* Careers */
-
+  /* 
   .scroll {
     height: 60vh;
-  }
+  } */
 
   .job-description-card .card-body {
     height: 50vh;

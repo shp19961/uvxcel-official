@@ -7,6 +7,7 @@ import { BsFillBriefcaseFill, BsCashStack } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
 import { FaUserPlus, FaClock } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
+import Pagination from "../12.React-Pagination/Pagination";
 
 const Careers = () => {
   const [email, setEmail] = useState("");
@@ -22,6 +23,7 @@ const Careers = () => {
   const [searchValue, setSearchValue] = useState("");
   const [formData, setFormData] = useState([]);
   const [distinctLocations, setDistinctLocations] = useState([]);
+  const [pageCount, setPageCount] = useState(0);
 
   const searchArray = ["reactjs developer", "python developer", "search job"];
 
@@ -54,9 +56,17 @@ const Careers = () => {
     }
   };
 
+  let jobsPerPage = 3;
+
   const getAllJobs = async () => {
-    const getJobs = await axios.get(`http://localhost:5004/get-jobs`);
+    const totalJobs = await axios.get(`http://localhost:5004/get-jobs`);
+    const getJobs = await axios.get(
+      `http://localhost:5004/get-jobs?page=1&limit=${jobsPerPage}`
+    );
     setJobs(getJobs.data);
+    const totalJobsCount = totalJobs.data.length;
+    setPageCount(Math.ceil(totalJobsCount / jobsPerPage) + 1);
+
     // load first job for showing active on refreshing the page
     setCurrentJob(getJobs.data[0]);
     for (let item of getJobs.data) {
@@ -66,6 +76,20 @@ const Careers = () => {
     }
     const setOfTypes = [...new Set(distinctLocations)];
     setDistinctLocations(setOfTypes);
+  };
+
+  const fetchMoreJobs = async (currentPage) => {
+    const res = await axios.get(
+      `http://localhost:5004/get-jobs?page=${currentPage}&limit=${jobsPerPage}`
+    );
+    return res.data;
+  };
+
+  const handlePageClick = async (pageNumber) => {
+    let currentPage = pageNumber.selected + 1;
+    const moreJobsFromServer = await fetchMoreJobs(currentPage);
+    setJobs(moreJobsFromServer);
+    console.log(pageCount);
   };
 
   const getFilteredJobs = async (location) => {
@@ -180,7 +204,7 @@ const Careers = () => {
           </div>
         </div>
         <div className="row mt-4 justify-content-center">
-          <div className="col-lg-4 col-md-6 scroll ">
+          <div className="col-lg-4 col-md-6">
             {jobs
               .filter((job) => {
                 if (jobSearch === "") {
@@ -229,6 +253,14 @@ const Careers = () => {
                   </div>
                 </a>
               ))}
+            <div className="row py-2">
+              <div className="col-12 col-lg-12 col-md-12">
+                <Pagination
+                  pageCount={pageCount}
+                  handlePageClick={handlePageClick}
+                />
+              </div>
+            </div>
           </div>
           <hr
             className="d-md-none d-block"
