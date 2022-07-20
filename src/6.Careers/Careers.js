@@ -20,6 +20,9 @@ const Careers = () => {
   const searchPTag = useRef();
   const searchContainerRef = useRef();
   const [searchValue, setSearchValue] = useState("");
+  const [formData, setFormData] = useState([]);
+  const [distinctLocations, setDistinctLocations] = useState([]);
+  const [locaionFilter, setLocationFilter] = useState("");
 
   const searchArray = ["reactjs developer", "python developer", "search job"];
 
@@ -52,13 +55,29 @@ const Careers = () => {
     }
   };
 
+  const getAllJobs = async () => {
+    const getJobs = await axios.get(`http://localhost:5004/get-jobs`);
+    setJobs(getJobs.data);
+    // load first job for showing active on refreshing the page
+    setCurrentJob(getJobs.data[0]);
+    setCurrentJob(getJobs.data[0]);
+    for (let item of getJobs.data) {
+      item.location.split(",").forEach((i) => {
+        distinctLocations.push(i);
+      });
+    }
+    const setOfTypes = [...new Set(distinctLocations)];
+    setDistinctLocations(setOfTypes);
+  };
+
+  const getFilteredJobs = async (location) => {
+    const getJobs = await axios.get(
+      `http://localhost:5004/get-jobs?location=${location}`
+    );
+    setJobs(getJobs.data);
+  };
+
   useEffect(() => {
-    const getAllJobs = async () => {
-      const getJobs = await axios.get(`http://localhost:5004/get-jobs`);
-      setJobs(getJobs.data);
-      // load first job for showing active on refreshing the page
-      setCurrentJob(getJobs.data[0]);
-    };
     getAllJobs();
     downToUp();
     if (searchValue) {
@@ -68,8 +87,6 @@ const Careers = () => {
     }
     // eslint-disable-next-line
   }, [searchValue]);
-
-  const [formData, setFormData] = useState([]);
 
   const onEmailChange = (e) => {
     let emailData = e.target.value;
@@ -97,7 +114,6 @@ const Careers = () => {
       input.value = "";
       input.style.border = "";
     }
-    console.warn(currentJob);
   };
 
   const loadCurrentJob = async (id, e) => {
@@ -139,6 +155,25 @@ const Careers = () => {
               <button>
                 <FiSearch />
               </button>
+            </div>
+            <div className="col-md-5 col-12 mt-4 mt-md-0">
+              <select
+                name=""
+                id=""
+                onChange={(e) => {
+                  setLocationFilter(e.target.value);
+                  getFilteredJobs(e.target.value);
+                }}
+              >
+                <option value="">All locations</option>
+                {distinctLocations.map((location) => {
+                  return (
+                    <option key={location} value={location}>
+                      {location}
+                    </option>
+                  );
+                })}
+              </select>
             </div>
           </div>
         </div>

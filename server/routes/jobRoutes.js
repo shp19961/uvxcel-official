@@ -36,8 +36,16 @@ router.post("/add-job", async (req, res) => {
 
 // Route-2 get all jobs details
 router.get("/get-jobs", async (req, res) => {
-  const alljobs = await allJobs.find();
-  res.send(alljobs);
+  if (req.query.location) {
+    console.log(req.query);
+    const alljobs = await allJobs.find({
+      location: { $regex: req.query.location, $options: "i" },
+    });
+    res.send(alljobs);
+  } else {
+    const alljobs = await allJobs.find();
+    res.send(alljobs);
+  }
 });
 
 // Route-3 get current job details

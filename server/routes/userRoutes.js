@@ -15,6 +15,7 @@ router.post("/save_data", (req, res) => {
   res.send({ newUser });
 });
 
+
 router.get("/get-users", async (req, res) => {
   const allUsers = await UserData.find();
   res.send(allUsers);
