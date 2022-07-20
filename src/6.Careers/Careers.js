@@ -139,7 +139,10 @@ const Careers = () => {
 
         <div className="row justify-content-center mt-4">
           <div className="col-lg-3 col-md-5">
-            <div className="search-container mb-4 mb-md-0" ref={searchContainerRef}>
+            <div
+              className="search-container mb-4 mb-md-0"
+              ref={searchContainerRef}
+            >
               <p ref={searchPTag}></p>
               <input
                 className="search-input"
