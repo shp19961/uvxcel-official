@@ -22,7 +22,6 @@ const Careers = () => {
   const [searchValue, setSearchValue] = useState("");
   const [formData, setFormData] = useState([]);
   const [distinctLocations, setDistinctLocations] = useState([]);
-  const [locaionFilter, setLocationFilter] = useState("");
 
   const searchArray = ["reactjs developer", "python developer", "search job"];
 
@@ -59,7 +58,6 @@ const Careers = () => {
     const getJobs = await axios.get(`http://localhost:5004/get-jobs`);
     setJobs(getJobs.data);
     // load first job for showing active on refreshing the page
-    setCurrentJob(getJobs.data[0]);
     setCurrentJob(getJobs.data[0]);
     for (let item of getJobs.data) {
       item.location.split(",").forEach((i) => {
@@ -137,9 +135,30 @@ const Careers = () => {
       className="careers"
     >
       <div className="container">
-        <h1 className="career-title">Career Opportunities</h1>
         <div className="row justify-content-center">
-          <div className="col-md-6 col-12">
+          <div className="col-md-3 order-md-0 order-2 my-3 my-md-0">
+            <select
+              name=""
+              id=""
+              className="form-select"
+              onChange={(e) => {
+                getFilteredJobs(e.target.value);
+              }}
+            >
+              <option value="">All locations</option>
+              {distinctLocations.map((location) => {
+                return (
+                  <option key={location} value={location}>
+                    {location}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+          <div className="col-md-5 order-md-0 order-1">
+            <h1 className="career-title">Career Opportunities</h1>
+          </div>
+          <div className="col-md-4 order-md-0 order-3">
             <div className="search-container" ref={searchContainerRef}>
               <p ref={searchPTag}></p>
               <input
@@ -156,29 +175,10 @@ const Careers = () => {
                 <FiSearch />
               </button>
             </div>
-            <div className="col-md-5 col-12 mt-4 mt-md-0">
-              <select
-                name=""
-                id=""
-                onChange={(e) => {
-                  setLocationFilter(e.target.value);
-                  getFilteredJobs(e.target.value);
-                }}
-              >
-                <option value="">All locations</option>
-                {distinctLocations.map((location) => {
-                  return (
-                    <option key={location} value={location}>
-                      {location}
-                    </option>
-                  );
-                })}
-              </select>
-            </div>
           </div>
         </div>
-        <div className="row mt-4">
-          <div className="col-lg-5 col-md-6 scroll px-lg-5 px-md-4">
+        <div className="row mt-4 justify-content-center">
+          <div className="col-lg-4 col-md-6 scroll ">
             {jobs
               .filter((job) => {
                 if (jobSearch === "") {
@@ -233,10 +233,10 @@ const Careers = () => {
             style={{ margin: "6rem 0rem" }}
             id="job"
           />
-          <div className="col-lg-7 col-md-6">
+          <div className="col-lg-6 col-md-6">
             <div className="container-fluid job-description">
-              <div className="row justify-content-center">
-                <div className="col-md-12 col-lg-11">
+              <div className="row">
+                <div className="col-md-12">
                   <div className="card job-description-card shadow-sm">
                     <div className="card-head p-3">
                       <h5 className="card-title">{currentJob.designation}</h5>

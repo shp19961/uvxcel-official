@@ -299,8 +299,7 @@
 }
 
 .search-container {
-  position: relative;
-  width: 285px;
+  width: 100%;
   text-align: center;
   margin: 0px auto;
   position: relative;
