@@ -36,11 +36,14 @@ router.post("/add-job", async (req, res) => {
 
 // Route-2 get all jobs details
 router.get("/get-jobs", async (req, res) => {
-  const { page = 1, limit = 5 } = req.query;
-  if (req.query.location) {
-    const alljobs = await allJobs.find({
-      location: { $regex: req.query.location, $options: "i" },
-    });
+  const { page = 1, limit = 1000, location } = req.query;
+  if (location && location !== "all") {
+    const alljobs = await allJobs
+      .find({
+        location: { $regex: location, $options: "i" },
+      })
+      .limit(limit * 1)
+      .skip((page - 1) * limit);
     res.send(alljobs);
   } else {
     const alljobs = await allJobs

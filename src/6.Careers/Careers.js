@@ -24,6 +24,7 @@ const Careers = () => {
   const [formData, setFormData] = useState([]);
   const [distinctLocations, setDistinctLocations] = useState([]);
   const [pageCount, setPageCount] = useState(0);
+  const [jobLocation, setJobLocation] = useState("all");
 
   const searchArray = ["reactjs developer", "python developer", "search job"];
 
@@ -61,11 +62,11 @@ const Careers = () => {
   const getAllJobs = async () => {
     const totalJobs = await axios.get(`http://localhost:5004/get-jobs`);
     const getJobs = await axios.get(
-      `http://localhost:5004/get-jobs?page=1&limit=${jobsPerPage}`
+      `http://localhost:5004/get-jobs?location=all&page=1&limit=${jobsPerPage}`
     );
     setJobs(getJobs.data);
     const totalJobsCount = totalJobs.data.length;
-    setPageCount(Math.ceil(totalJobsCount / jobsPerPage) + 1);
+    setPageCount(Math.ceil(totalJobsCount / jobsPerPage));
 
     // load first job for showing active on refreshing the page
     setCurrentJob(getJobs.data[0]);
@@ -80,7 +81,7 @@ const Careers = () => {
 
   const fetchMoreJobs = async (currentPage) => {
     const res = await axios.get(
-      `http://localhost:5004/get-jobs?page=${currentPage}&limit=${jobsPerPage}`
+      `http://localhost:5004/get-jobs?location=${jobLocation}&page=${currentPage}&limit=${jobsPerPage}`
     );
     return res.data;
   };
@@ -89,13 +90,17 @@ const Careers = () => {
     let currentPage = pageNumber.selected + 1;
     const moreJobsFromServer = await fetchMoreJobs(currentPage);
     setJobs(moreJobsFromServer);
-    console.log(pageCount);
   };
 
   const getFilteredJobs = async (location) => {
-    const getJobs = await axios.get(
+    const totalFilteredJobs = await axios.get(
       `http://localhost:5004/get-jobs?location=${location}`
     );
+    const getJobs = await axios.get(
+      `http://localhost:5004/get-jobs?location=${location}&page=1&limit=${jobsPerPage}`
+    );
+    const totalFilteredJobsCount = totalFilteredJobs.data.length;
+    setPageCount(Math.ceil(totalFilteredJobsCount / jobsPerPage));
     setJobs(getJobs.data);
   };
 
@@ -190,9 +195,10 @@ const Careers = () => {
               className="form-select p-2"
               onChange={(e) => {
                 getFilteredJobs(e.target.value);
+                setJobLocation(e.target.value);
               }}
             >
-              <option value="">All locations</option>
+              <option value="all">All locations</option>
               {distinctLocations.map((location) => {
                 return (
                   <option key={location} value={location}>
