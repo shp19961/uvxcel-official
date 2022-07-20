@@ -135,31 +135,11 @@ const Careers = () => {
       className="careers"
     >
       <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-md-3 order-md-0 order-2 my-3 my-md-0">
-            <select
-              name=""
-              id=""
-              className="form-select"
-              onChange={(e) => {
-                getFilteredJobs(e.target.value);
-              }}
-            >
-              <option value="">All locations</option>
-              {distinctLocations.map((location) => {
-                return (
-                  <option key={location} value={location}>
-                    {location}
-                  </option>
-                );
-              })}
-            </select>
-          </div>
-          <div className="col-md-5 order-md-0 order-1">
-            <h1 className="career-title">Career Opportunities</h1>
-          </div>
-          <div className="col-md-4 order-md-0 order-3">
-            <div className="search-container" ref={searchContainerRef}>
+        <h1 className="career-title">Career Opportunities</h1>
+
+        <div className="row justify-content-center mt-4">
+          <div className="col-lg-3 col-md-5">
+            <div className="search-container mb-4 mb-md-0" ref={searchContainerRef}>
               <p ref={searchPTag}></p>
               <input
                 className="search-input"
@@ -175,6 +155,25 @@ const Careers = () => {
                 <FiSearch />
               </button>
             </div>
+          </div>
+          <div className="col-lg-3 col-md-5">
+            <select
+              name=""
+              id=""
+              className="form-select p-2"
+              onChange={(e) => {
+                getFilteredJobs(e.target.value);
+              }}
+            >
+              <option value="">All locations</option>
+              {distinctLocations.map((location) => {
+                return (
+                  <option key={location} value={location}>
+                    {location}
+                  </option>
+                );
+              })}
+            </select>
           </div>
         </div>
         <div className="row mt-4 justify-content-center">
