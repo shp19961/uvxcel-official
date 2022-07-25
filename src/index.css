@@ -385,6 +385,7 @@
 .page-link {
   padding: 0.1rem 0.5rem !important;
   color: black !important;
+  box-shadow: none !important;
 }
 
 .page-link:hover {

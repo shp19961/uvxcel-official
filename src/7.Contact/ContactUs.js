@@ -124,7 +124,7 @@ const ContactUs = () => {
       <div className="container">
         <div className="text-center">
           <h5 className="text-uppercase">Let's Start a Conversation</h5>
-          <h1 className="fw-bold">Contact Us</h1>
+          <h2 className="fw-bold">Contact Us</h2>
         </div>
       </div>
       <div className="container-fluid">
