@@ -538,8 +538,8 @@ span {
 }
 
 .contact .form-control {
-  border: 1px solid var(--danger);
-  border-radius: 10px;
+  border: 1px solid peru;
+  border-radius: 8px;
   box-shadow: none !important;
 }
 
