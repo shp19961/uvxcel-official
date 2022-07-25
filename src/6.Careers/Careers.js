@@ -26,7 +26,11 @@ const Careers = () => {
   const [pageCount, setPageCount] = useState(0);
   const [jobLocation, setJobLocation] = useState("all");
 
-  const searchArray = ["reactjs developer", "python developer", "search job"];
+  const searchArray = [
+    "Search by designation",
+    "Search by location",
+    "Search job",
+  ];
 
   let textArrayIndex = 0;
   // eslint-disable-next-line
@@ -70,7 +74,7 @@ const Careers = () => {
 
     // load first job for showing active on refreshing the page
     setCurrentJob(getJobs.data[0]);
-    for (let item of getJobs.data) {
+    for (let item of totalJobs.data) {
       item.location.split(",").forEach((i) => {
         distinctLocations.push(i);
       });
@@ -167,28 +171,7 @@ const Careers = () => {
         <h1 className="career-title">Career Opportunities</h1>
 
         <div className="row justify-content-center mt-4">
-          <div className="col-lg-3 col-md-5">
-            <div
-              className="search-container mb-4 mb-md-0"
-              ref={searchContainerRef}
-            >
-              <p ref={searchPTag}></p>
-              <input
-                className="search-input"
-                type="text"
-                value={searchValue}
-                onChange={(e) => {
-                  setJobSearch(e.target.value);
-                  setSearchValue(e.target.value);
-                }}
-                ref={searchInput}
-              />
-              <button>
-                <FiSearch />
-              </button>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-5">
+          <div className="col-lg-4 col-md-6 px-4-on-small-screen">
             <select
               name=""
               id=""
@@ -207,6 +190,29 @@ const Careers = () => {
                 );
               })}
             </select>
+          </div>
+          <div className="col-lg-6 col-md-6">
+            <div className="container">
+              <div
+                className="search-container mt-4 mt-md-0"
+                ref={searchContainerRef}
+              >
+                <p ref={searchPTag}></p>
+                <input
+                  className="search-input"
+                  type="text"
+                  value={searchValue}
+                  onChange={(e) => {
+                    setJobSearch(e.target.value);
+                    setSearchValue(e.target.value);
+                  }}
+                  ref={searchInput}
+                />
+                <button>
+                  <FiSearch />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
         <div className="row mt-4 justify-content-center">
@@ -260,7 +266,7 @@ const Careers = () => {
                 </a>
               ))}
             <div className="row py-2">
-              <div className="col-12 col-lg-12 col-md-12">
+              <div className="col-12">
                 <Pagination
                   pageCount={pageCount}
                   handlePageClick={handlePageClick}
@@ -273,7 +279,7 @@ const Careers = () => {
             style={{ margin: "6rem 0rem" }}
             id="job"
           />
-          <div className="col-lg-6 col-md-6">
+          <div className="col-lg-6  col-md-6">
             <div className="container-fluid job-description">
               <div className="row">
                 <div className="col-md-12">

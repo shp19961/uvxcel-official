@@ -710,6 +710,10 @@ footer p .icons:hover {
     height: 50vh;
   }
 
+  .px-4-on-small-screen {
+    padding: 0 22px !important;
+  }
+
   .newsletter {
     width: 100%;
   }
