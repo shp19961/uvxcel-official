@@ -1,6 +1,7 @@
 import React from "react";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import logo from "../uvxcel.png";
 
 const Footer = () => {
   return (
@@ -8,8 +9,12 @@ const Footer = () => {
       <div className="container">
         <div className="row justify-content-around py-5">
           <div className="col-md-3 col-8">
-            <h2>uvXcel</h2>
-            <p>United We Excel</p>
+            <div className="row mb-3">
+              <div className="col-7">
+                <img className="footer-logo" src={logo} alt="...." />
+              </div>
+            </div>
+
             <p>
               We aim to emerge as the Preferred technology partner for our
               client.

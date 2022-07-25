@@ -543,7 +543,7 @@ span {
 }
 
 .contact .form-control:focus {
-  border: 1.5px solid var(--primary) !important;
+  border: 1px solid var(--primary) !important;
 }
 
 .contact hr {
@@ -559,6 +559,10 @@ footer {
   right: 0;
   margin-top: 2rem;
   background: black;
+}
+
+.footer-logo {
+  width: 100% !important;
 }
 
 footer p {
