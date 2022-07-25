@@ -292,12 +292,14 @@ const Careers = () => {
                             : "Not Mentioned"}
                         </span>
                       </p>
-                      <Link className="btn btn-info mt-2" to="/applyform">
+                      <Link className="btn job-apply-btn mt-2" to="/applyform">
                         Apply now
                       </Link>
                     </div>
                     <div className="card-body">
-                      <span className="fw-bold h5">Full Job Description</span>
+                      <span className="fw-bold h5 job-description-heading">
+                        Full Job Description
+                      </span>
                       <p className="card-text">
                         <br />
                         <span>{currentJob.desc}</span>
@@ -334,7 +336,9 @@ const Careers = () => {
                         </ul>
                       </span>
                       <hr />
-                      <h5 className="fw-bold">Hiring Insights</h5>
+                      <h5 className="fw-bold job-description-heading">
+                        Hiring Insights
+                      </h5>
                       <p>
                         <FaUserPlus /> Hiring{" "}
                         {currentJob.positions > 1
@@ -352,11 +356,7 @@ const Careers = () => {
                     OR use the link below to fill the Candidate Information
                     Form.
                     <br />
-                    <Link
-                      className=""
-                      style={{ color: "blue" }}
-                      to="/applyform"
-                    >
+                    <Link style={{ color: "vsr(--primary)" }} to="/applyform">
                       Candidate Form
                     </Link>
                   </p>

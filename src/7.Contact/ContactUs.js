@@ -123,9 +123,7 @@ const ContactUs = () => {
     >
       <div className="container">
         <div className="text-center">
-          <h5 className="text-uppercase">
-            Let's Start a Conversation
-          </h5>
+          <h5 className="text-uppercase">Let's Start a Conversation</h5>
           <h1 className="fw-bold">Contact Us</h1>
         </div>
       </div>
@@ -133,7 +131,9 @@ const ContactUs = () => {
         <div className="row mt-md-5 mt-4 justify-content-evenly">
           <div className="col-lg-5 col-md-6 mt-1">
             <div className="address">
-              <h4 className="mb-4">Our Office</h4>
+              <h4 className="mb-4" style={{ color: "var(--primary)" }}>
+                Our Office
+              </h4>
               <p>
                 <GrLocation />
                 <span className="mx-2">
@@ -218,7 +218,7 @@ const ContactUs = () => {
                         id="mySelect"
                         style={{
                           width: "116px",
-                          border: "2px solid orange",
+                          border: "1px solid var(--danger)",
                         }}
                         onChange={(e) => {
                           setCountryCode(e.target.value);
@@ -295,7 +295,7 @@ const ContactUs = () => {
                     style={{ width: "100%" }}
                     type="submit"
                     id="submit-btn"
-                    className="btn btn-primary p-2"
+                    className="btn job-apply-btn p-2"
                   >
                     Send Message
                   </button>

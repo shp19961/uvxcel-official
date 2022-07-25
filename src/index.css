@@ -1,3 +1,8 @@
+:root {
+  --danger: #f63203;
+  --primary: #00368b;
+}
+
 .scroll-top {
   position: fixed;
   right: 20px;
@@ -6,7 +11,7 @@
   font-size: 2.5rem;
   z-index: 999;
   cursor: pointer;
-  color: #F21B07;
+  color: var(--danger);
 }
 
 .toast-container {
@@ -42,7 +47,7 @@
 }
 
 .navbar-collapse {
-  transition: .6s ease-in-out !important;
+  transition: 0.6s ease-in-out !important;
 }
 
 .navbar-brand {
@@ -60,18 +65,16 @@
   border: none !important;
 }
 
-.nav-item>.active,
-.nav-item>.active:hover {
-  color: red !important;
-  border-bottom: 3.6px solid red;
+.nav-item > .active,
+.nav-item > .active:hover {
+  color: var(--danger) !important;
+  border-bottom: 3.6px solid var(--danger);
 }
 
 .nav-link:hover {
-  color: orange !important;
+  color: var(--danger) !important;
   cursor: pointer;
 }
-
-
 
 /* Styles for Home.js */
 
@@ -87,14 +90,13 @@
   object-fit: fill !important;
 }
 
-
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   background-color: black !important;
 }
 
 .indicators {
-  background-color: red !important;
+  background-color: var(--danger) !important;
   margin: 2rem 5px !important;
 }
 
@@ -104,7 +106,7 @@
   height: 480px;
   text-align: left;
   padding-top: 60px;
-  background: url('./images/bg.jpg') no-repeat center center;
+  background: url("./images/bg.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -124,13 +126,13 @@
   padding: 2.5rem 2.5rem 2.4rem 3.1rem;
   position: relative;
   border-radius: 1.56rem;
-  transition: .2s ease-in;
+  transition: 0.2s ease-in;
   box-shadow: 0 0.9rem 2.5rem 0 rgba(0, 0, 0, 0.08);
 }
 
 .single-feature:hover {
   color: white;
-  background: purple;
+  background: var(--primary);
 }
 
 .feature-icon {
@@ -144,15 +146,17 @@
   color: white;
   font-size: 23px;
   border-bottom-left-radius: 25px;
-  background: deeppink;
+  background: var(--danger);
 }
-
 
 /* Styles for AboutUs.js */
 
-
-.about-title {
-  color: #033E8C;
+/* .about-title, */
+.about-heading,
+.partners,
+.mission-vision,
+.engagement {
+  color: var(--primary);
 }
 
 .about-text {
@@ -160,7 +164,6 @@
   font-size: 16px;
   line-height: 2rem;
 }
-
 
 /* Vision mission */
 #vision-mission {
@@ -176,14 +179,13 @@
 }
 
 .bottom-content .card:hover {
-  border: 1px solid lightskyblue !important;
+  border: 1px solid var(--primary) !important;
 }
 
 .bottom-content .card:hover img {
   -webkit-filter: grayscale(100%) !important;
   filter: grayscale(100%) !important;
 }
-
 
 /* Partners */
 .about .owl-carousel .item {
@@ -200,19 +202,18 @@
   margin-bottom: 15px;
 }
 
-
 /* Promo */
 .promo-section {
   margin-top: 5rem;
 }
 
 .single-promo-1 h5 {
-  color: deeppink;
+  color: var(--primary);
   text-transform: uppercase;
 }
 
 .single-promo-hover {
-  transition: .2s ease-out;
+  transition: 0.2s ease-out;
   will-change: transform;
 }
 
@@ -227,38 +228,38 @@
 
 .single-promo-1::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 0.06rem;
   height: 0.18rem;
   top: 0rem;
   left: 0rem;
   border-radius: 50%;
-  transition: .2s ease-out;
-
+  transition: 0.2s ease-out;
 }
 
 .single-promo-1:hover::before {
   width: 100%;
-  background: deeppink;
+  background: var(--danger);
 }
 
 .single-promo-hover:hover {
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.64);
 }
 
-
-
-
 /* Styles for Services.js */
 
-.services-ttl {
+/* .services-ttl {
   color: rgb(0, 58, 139);
   font-size: 35px !important;
   font-weight: bold;
-}
+} */
 
 .services .card-text {
   font-size: small;
+}
+
+.services .card-title {
+  color: var(--primary);
 }
 
 .services img {
@@ -266,9 +267,6 @@
   height: 100%;
   width: 100%;
 }
-
-
-
 
 /* Styles for Technologies.js */
 
@@ -288,8 +286,6 @@
   margin-bottom: 15px;
 }
 
-
-
 /* Styles for Careers.js */
 
 .career-title {
@@ -305,13 +301,14 @@
   position: relative;
   height: 42px;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .search-container input {
   position: absolute;
+  border: none !important;
   top: 0;
   left: 0;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   width: 100%;
   padding: 5px 20px;
   border-radius: 10px;
@@ -343,14 +340,12 @@
 .search-container button svg {
   font-size: 24px;
   color: rgb(190, 190, 190);
-
 }
 
 .search-container .setPlace {
   transition: all 1s;
   transform: translateY(40px);
   animation: downToUp 2s both;
-
 }
 
 .search-container .removePlace {
@@ -382,14 +377,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
 /* .scroll {
   overflow-y: scroll;
   height: 63vh;
@@ -397,16 +384,27 @@
 
 .page-link {
   padding: 0.1rem 0.5rem !important;
+  color: black !important;
 }
 
 .page-link:hover {
-  background: red !important;
+  background: black !important;
   color: white !important;
 }
 
+.active > .page-link {
+  background: black !important;
+  border-color: black !important;
+  color: white !important;
+  box-shadow: none !important;
+}
+
+.disabled > .page-link {
+  color: gray !important;
+}
 
 .job-card {
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .job-card:hover {
@@ -419,7 +417,7 @@
 
 .job-card .card-title,
 .job-description .card-title {
-  color: orange;
+  color: var(--danger);
 }
 
 .job-description-card .card-head {
@@ -446,6 +444,10 @@ span {
   margin-bottom: 0;
 }
 
+.job-description-card .job-description-heading {
+  color: var(--primary);
+}
+
 .apply-btn {
   position: absolute;
   top: 0;
@@ -461,20 +463,25 @@ span {
   margin: 2rem 0;
 }
 
-
 .main-btn {
-  background-color: red;
+  background-color: var(--primary);
   color: white;
   padding: 0.63rem 1.88rem;
-  border: 1px solid red;
+  border: 1px solid var(--primary);
   border-radius: 5px;
   font-weight: 600;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
-.main-btn:hover {
-  background: white;
-  color: red;
+.main-btn:hover,
+.job-apply-btn:hover {
+  background: white !important;
+  color: var(--primary) !important;
+}
+
+.job-apply-btn {
+  background: var(--primary) !important;
+  color: white !important;
 }
 
 .newsletter .form-control {
@@ -494,7 +501,7 @@ span {
 .newsletter .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: red;
+  border-color: var(--primary);
 }
 
 /* .scroll::-webkit-scrollbar {
@@ -514,14 +521,13 @@ span {
 } */
 
 .active-job {
-  background: black !important;
-  transition: .4s ease-in-out;
+  background: rgba(0, 0, 0, 0.811) !important;
+  transition: 0.4s ease-in-out;
 }
 
 .active-job .card-body {
   color: white !important;
 }
-
 
 /* Contact us Form Styles */
 
@@ -531,19 +537,18 @@ span {
 }
 
 .contact .form-control {
-  border: 2px solid orange;
-  border-radius: 15px;
+  border: 1px solid var(--danger);
+  border-radius: 10px;
   box-shadow: none !important;
 }
 
 .contact .form-control:focus {
-  border: 2.4px solid purple !important;
+  border: 1.5px solid var(--primary) !important;
 }
 
 .contact hr {
   color: darkblue;
 }
-
 
 /* Footer */
 
@@ -562,38 +567,26 @@ footer p {
   color: darkgray !important;
 }
 
-footer p .icons:hover {
-  color: orange !important;
-}
-
 .explore-link {
   text-decoration: none;
   color: darkgray !important;
 }
 
-.explore-link:hover {
-  color: orange !important;
-}
-
-footer hr {
-  width: 24px;
-  color: yellow;
-  background: white;
-  height: 2px;
-  margin: 0 0 5px 0;
+.explore-link:hover,
+footer p .icons:hover {
+  color: var(--danger) !important;
 }
 
 /* Resources */
 .resources .card:hover {
   cursor: pointer;
-  background: orange;
+  background: var(--danger);
   color: white;
 }
 
-
 /* Media Queries */
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .carousel-inner {
     height: 635px;
   }
@@ -603,8 +596,7 @@ footer hr {
   }
 }
 
-@media (max-width:991px) {
-
+@media (max-width: 991px) {
   .toast-container {
     padding-right: 30% !important;
     padding-left: 30% !important;
@@ -622,8 +614,8 @@ footer hr {
     text-align: center;
   }
 
-  .nav-item>.active,
-  .nav-item>.active:hover {
+  .nav-item > .active,
+  .nav-item > .active:hover {
     border-bottom: none;
   }
 
@@ -641,7 +633,6 @@ footer hr {
   .bottom-content .card {
     height: 350px;
   }
-
 
   /* Technologies */
 
@@ -662,19 +653,17 @@ footer hr {
   .newsletter {
     width: 100%;
   }
-
 }
 
-@media (max-width:767px) {
-
+@media (max-width: 767px) {
   .toast-container {
     padding-right: 11% !important;
     padding-left: 11% !important;
   }
 
   /* Navbar */
-  .nav-item>.active,
-  .nav-item>.active:hover {
+  .nav-item > .active,
+  .nav-item > .active:hover {
     border-bottom: none;
   }
 
@@ -691,12 +680,10 @@ footer hr {
     margin: 0.5rem 5px !important;
   }
 
-
   /* About */
   .about-text {
     font-size: smaller;
   }
-
 
   /* Technologies */
   .technologies {
@@ -707,7 +694,6 @@ footer hr {
     height: 60px;
     width: 55px;
   }
-
 
   /* Careers */
   /* 
@@ -727,5 +713,4 @@ footer hr {
     width: 100%;
     margin-top: 1rem;
   }
-
 }

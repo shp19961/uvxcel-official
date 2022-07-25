@@ -22,9 +22,11 @@ const AboutUs = () => {
       <section>
         <div className="container mb-5">
           <div className="row about-image">
-            <h1 className="about-title mb-4 text-center">About Us</h1>
+            <h1 className="about-title mb-4 text-center fw-bold">About Us</h1>
             <div className="col-12">
-              <h2 className="mb-2 mb-lg-3 fw-bold">Company Overview</h2>
+              <h2 className="mb-2 mb-lg-3 fw-bold about-heading">
+                Company Overview
+              </h2>
               <div className="about-text">
                 <p>
                   <strong>uvXcel</strong> is contradictorily a startup that has
@@ -70,7 +72,9 @@ const AboutUs = () => {
 
       <section id="vision-mission">
         <div className="container my-5">
-          <h2 className="mb-4 fw-bold">Mission, Vision &amp; Value</h2>
+          <h2 className="mb-4 fw-bold mission-vision">
+            Mission, Vision &amp; Value
+          </h2>
 
           <div className="row bottom-content d-flex justify-content-center">
             <div className="col-md-4 col-12">
@@ -141,7 +145,7 @@ const AboutUs = () => {
       </section>
 
       <div className="container" data-aos="fade-up" data-aos-duration="1500">
-        <h2 className="fw-bold mb-4">Our Partners</h2>
+        <h2 className="fw-bold mb-4 partners">Our Partners</h2>
 
         <OwlCarousel
           autoplayTimeout={3000}
@@ -190,25 +194,14 @@ const AboutUs = () => {
 
       <section className="promo-section pb-md-5">
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-7 col-md-8 col-12">
-              <div className="section-heading text-center">
-                <h1>Current Engagement</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
-                  <br />
-                  Lorem ipsum dolor sit amet.
-                </p>
-              </div>
-            </div>
-          </div>
+          <h2 className="engagement mb-5 fw-bold">Current Engagement</h2>
 
           <div className="row mobile-px-20 mt-2">
             <div className="col-md-6 col-lg-4">
               <div className="single-promo-hover single-promo-1 text-center">
                 <div className="circle-icon">
                   <span>
-                    <FaHandshake size={45} />
+                    <FaHandshake color="red" size={45} />
                   </span>
                 </div>
                 <h5 className="py-3">CUSTOMER OUTREACH</h5>
@@ -225,7 +218,7 @@ const AboutUs = () => {
               <div className="single-promo-hover single-promo-1 text-center">
                 <div className="circle-icon">
                   <span>
-                    <AiFillDatabase size={45} />
+                    <AiFillDatabase color="red" size={45} />
                   </span>
                 </div>
                 <h5 className="py-3">DATA SERVICES</h5>
@@ -242,7 +235,7 @@ const AboutUs = () => {
               <div className="single-promo-hover single-promo-1 text-center">
                 <div className="circle-icon">
                   <span>
-                    <RiFileExcel2Fill size={45} />
+                    <RiFileExcel2Fill color="red" size={45} />
                   </span>
                 </div>
                 <h5 className="py-3">BI & DW SOLUTIONS</h5>
